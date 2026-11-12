@@ -619,6 +619,40 @@ footer{background:#08182f;border-top:4px solid #c49a45}
  .slide-caption small{font-size:9px}
 }
 
+
+/* کارت‌های دسترسی سریع؛ لاجوردی با نشان‌های طلایی */
+.quick-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.quick-item{
+ position:relative;min-height:112px;display:flex;flex-direction:column;
+ justify-content:center;align-items:center;text-align:center;gap:9px;
+ padding:17px 12px;background:linear-gradient(145deg,#173b78 0%,#10295b 100%);
+ border:1px solid #c49a45;border-radius:13px;color:#fff;
+ box-shadow:0 9px 22px #07162d35;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease
+}
+.quick-item:before{content:"";position:absolute;inset:5px;border:1px solid #d7ad5840;border-radius:9px;pointer-events:none}
+.quick-item:hover,.quick-item:focus-visible{
+ transform:translateY(-5px);border-color:#f0d18a;
+ box-shadow:0 15px 30px #07162d55,0 0 0 3px #d7ad5820;outline:none
+}
+.quick-icon{
+ width:43px;height:43px;flex:0 0 43px;display:grid;place-items:center;
+ background:#ffffff0b;border:1px solid #d7ad5880;border-radius:12px;
+ color:#e7c477;font-size:0;transition:background .25s ease,transform .25s ease
+}
+.quick-icon svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+.quick-item:hover .quick-icon{background:#d7ad5820;transform:scale(1.07)}
+.quick-item strong{display:block;color:#fff;font-size:12px;font-weight:800}
+.quick-item small{display:block;color:#d9e3f2;font-size:9px}
+@media(max-width:980px){.quick-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:720px){
+ .quick-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ .quick-item{min-height:104px;padding:13px 8px;gap:7px}
+ .quick-icon{width:39px;height:39px;flex-basis:39px}
+ .quick-icon svg{width:22px;height:22px}
+ .quick-item strong{font-size:11px}
+ .quick-item small{font-size:8px}
+}
+
 </style>
 </head>
 <body>
@@ -641,10 +675,10 @@ footer{background:#08182f;border-top:4px solid #c49a45}
 </div></div></div></section>
 <section class="quicknav" aria-label="دسترسی سریع"><div class="wrap">
 <div class="quick-grid">
-<a class="quick-item" href="archive.html"><span class="quick-icon" aria-hidden="true">▤</span><span><strong>آرشیو علمی</strong><small>مقالات و منابع پژوهشی</small></span></a>
-<a class="quick-item" href="podcasts.html"><span class="quick-icon" aria-hidden="true">♫</span><span><strong>پادکست‌ها</strong><small>شنیدنی‌های هنر و فرهنگ</small></span></a>
-<a class="quick-item" href="student-works.html"><span class="quick-icon" aria-hidden="true">✿</span><span><strong>آثار دانشجویان</strong><small>گالری آثار و تجربه‌ها</small></span></a>
-<a class="quick-item" href="professors.html"><span class="quick-icon" aria-hidden="true">✥</span><span><strong>اساتید</strong><small>معرفی استادان و حوزه‌ها</small></span></a>
+<a class="quick-item" href="archive.html"><span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 3.8h10l4 4V20H5z"/><path d="M15 3.8V8h4M8 12h8M8 15.5h8"/></svg></span><span><strong>آرشیو علمی</strong><small>مقالات و منابع پژوهشی</small></span></a>
+<a class="quick-item" href="podcasts.html"><span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg></span><span><strong>پادکست‌ها</strong><small>شنیدنی‌های هنر و فرهنگ</small></span></a>
+<a class="quick-item" href="student-works.html"><span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 12c-4-1-5-6-1-7 2-.5 3 1.5 1 7Z"/><path d="M12 12c1-4 6-5 7-1 .5 2-1.5 3-7 1Z"/><path d="M12 12c4 1 5 6 1 7-2 .5-3-1.5-1-7Z"/><path d="M12 12c-1 4-6 5-7 1-.5-2 1.5-3 7-1Z"/><circle cx="12" cy="12" r="1.5"/></svg></span><span><strong>آثار دانشجویان</strong><small>گالری آثار و تجربه‌ها</small></span></a>
+<a class="quick-item" href="professors.html"><span class="quick-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 9.5 12 5l8 4.5-8 4.5z"/><path d="M7 11.5V16c3 2.5 7 2.5 10 0v-4.5M20 10v6"/></svg></span><span><strong>اساتید</strong><small>معرفی استادان و حوزه‌ها</small></span></a>
 </div></div></section>
 <section class="events" id="events"><div class="wrap"><div class="section-head"><div><div class="section-kicker">روایت تجربه‌های هنری</div><h2>رویدادهای انجمن</h2><p>منتخبی از نمایشگاه‌ها، کارگاه‌ها و بازدیدهای علمی</p></div><a class="more" href="events/naqsh-khial.html">همه جزئیات رویداد منتخب ←</a></div>
 <div class="events-grid">
