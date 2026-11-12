@@ -78,6 +78,103 @@ header{background:#10295b;border-bottom:3px solid var(--gold)}
 footer{background:#091d46;border-top:5px solid var(--gold)}
 footer strong{color:var(--gold-light)}
 
+
+/* بازآرایی نهایی: الهام از لاجورد نسخه‌های مصور، یشمی کاشی و زرِ تذهیب */
+:root{
+ --navy:#142f68;--navy2:#0b204d;--blue:#234c91;--cyan:#159b9b;
+ --cyan2:#d4eeeb;--amber:#d9ad4e;--jade:#17664f;--ink:#203653;
+ --muted:#60758d;--bg:#dce6f2;--line:#b9cbe0;--paper:#eaf0f7;
+ --gold:#e0b64f;--gold-light:#f4d98c;
+}
+html,body{max-width:100%;overflow-x:clip}
+body{background:linear-gradient(180deg,#d6e1ef 0%,#e4ebf4 45%,#d2dfed 100%)}
+.wrap{width:min(1200px,calc(100% - 48px))}
+header{background:linear-gradient(105deg,#0b204d,#173b78 72%,#17664f);border-bottom:2px solid var(--gold)}
+.brand{color:#fff}
+.seal{border:2px solid var(--gold);box-shadow:0 0 0 3px #e0b64f22}
+.links{color:#edf3fb}
+.links a:hover{color:var(--gold-light)}
+.hero-shell,.hero{background:
+ radial-gradient(circle at 8% 12%,#d9ad4e20 0 2px,transparent 3px),
+ linear-gradient(125deg,#0b204d 0%,#173b78 58%,#17664f 100%);
+ border:1px solid #d9ad4e}
+.hero h1,.hero-meta,.hero-meta b{color:#fff}
+.hero h1 span{color:#f1cf78}
+.hero p{color:#e1eaf5}
+.eyebrow,.section-kicker{color:#16877f}
+.hero .eyebrow{color:#a6e4d9}
+.eyebrow:before{background:var(--gold)}
+.section-head h2{color:#102b60}
+.section-head{position:relative}
+.section-head h2:after{content:"";display:block;width:54px;height:3px;margin-top:7px;background:linear-gradient(90deg,var(--gold),var(--jade));border-radius:3px}
+.quick-item,.side-list,.news-card,.media-card,.contact-box,.category,.episode{
+ background:linear-gradient(145deg,#edf3f9,#dce7f2);
+ border-color:#b9cbe0;
+}
+.quick-icon,.media-icon,.category-icon{background:#17664f;color:#f3d98f}
+.category:nth-child(2n) .category-icon{background:#173b78;color:#f3d98f}
+.category:nth-child(3n) .category-icon{background:#168d8d;color:#fff}
+.category-section,.gallery{background:linear-gradient(135deg,#c9d9e9,#d6e6df)}
+.events{background:#dce6f1}
+.event{background:linear-gradient(135deg,#edf3f8,#d6e5df);border-color:#b8cbbf}
+.event-mark{background:linear-gradient(145deg,#10295b,#17664f);color:#f3d98f;border:1px solid var(--gold)}
+.story-label,.tag,.count{background:var(--jade);color:#f7e5b2;border:1px solid var(--gold)}
+.story-label{background:var(--gold);color:#182f55}
+.about{background:
+ radial-gradient(circle at 90% 15%,#e0b64f1c 0 2px,transparent 3px),
+ linear-gradient(115deg,#0b204d,#173b78 60%,#17664f)}
+.about-visual{border-color:#d9ad4e}
+.about-facts b{color:#f2d17a}
+footer{background:linear-gradient(110deg,#081a40,#10295b 65%,#124e45);border-top:4px solid var(--gold)}
+.footer-col strong,.copyright{color:#f0d58d}
+.footer-main{border-bottom:1px solid #d9ad4e66}
+.btn,.nav-cta{background:#17664f;border-color:var(--gold);color:#fff}
+.btn:hover,.nav-cta:hover{background:#0b204d;border-color:#f2d17a}
+.more,.read,.media-card a{color:#17664f}
+.news-meta,.side-news small,.event small{color:#147e78}
+.gallery-tile{border:1px solid #d9ad4e}
+.copyright{border-top:1px solid #d9ad4e66;margin-top:4px;padding-top:14px}
+@media(max-width:720px){
+ html{scroll-padding-top:76px}
+ .wrap{width:calc(100% - 30px);max-width:100%}
+ .nav{width:100%;gap:8px;min-width:0}
+ .brand{white-space:normal;min-width:0;flex:1;font-size:11px;line-height:1.6;gap:8px}
+ .brand>span:last-child{min-width:0;white-space:normal}
+ .seal{width:40px;height:40px;flex:0 0 40px}
+ .menu-toggle{flex:0 0 auto}
+ .links{max-width:100vw;box-sizing:border-box}
+ .hero h1{font-size:clamp(25px,7vw,34px);line-height:1.55;overflow-wrap:anywhere}
+ .hero p,.about-copy p,.contact-grid p{font-size:12px;line-height:2.1}
+ .hero-actions .btn{max-width:100%;white-space:normal}
+ .hero-meta{flex-wrap:wrap;gap:8px 14px}
+ .quick-grid,.category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .quick-item,.category,.news-card,.event,.media-card,.contact-box,.side-list{min-width:0}
+ .quick-item{gap:7px;padding:9px;overflow-wrap:anywhere}
+ .quick-item strong{font-size:10px}
+ .category{padding:12px;overflow-wrap:anywhere}
+ .category p{font-size:10px}
+ .news-card{grid-template-columns:minmax(88px,32%) minmax(0,1fr)}
+ .news-image{min-width:0}
+ .news-body{min-width:0;overflow-wrap:anywhere}
+ .news-body h3{font-size:14px}
+ .news-body p{font-size:10px;line-height:1.9}
+ .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .about-grid,.contact-grid,.featured-grid{grid-template-columns:minmax(0,1fr)}
+ .footer-main{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .copyright{font-size:10px;line-height:2;overflow-wrap:anywhere}
+}
+@media(max-width:390px){
+ .wrap{width:calc(100% - 24px)}
+ .brand{font-size:10px}
+ .hero-shell{padding:17px 12px}
+ .quick-item small{font-size:8px}
+ .category-grid{gap:7px}
+ .category{padding:10px}
+ .footer-main{gap:14px}
+}
+img,video,iframe,audio{max-width:100%}
+.grid,.hero-grid,.featured-grid,.about-grid,.contact-grid,.footer-main{min-width:0}
+
 </style>
 </head>
 <body><div class="topline"></div><header><div class="wrap nav"><a class="brand" href="index.html"><span class="seal"><img src="https://raw.githubusercontent.com/islamicart/islamicart.github.io/main/%20%D9%84%D9%88%DA%AF%D9%88%20%D8%A7%D9%86%D8%AC%D9%85%D9%86%20%D9%87%D9%86%D8%B1%20%D8%A7%D8%B3%D9%84%D8%A7%D9%85%DB%8C%20.png" alt="نشان انجمن"></span><span>انجمن علمی هنر اسلامی<small>دانشگاه بیرجند</small></span></a><a class="back" href="index.html">بازگشت به صفحه اصلی ←</a></div></header>
