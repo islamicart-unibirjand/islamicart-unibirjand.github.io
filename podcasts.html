@@ -218,6 +218,66 @@ img,video,iframe,audio{max-width:100%}
 .back,footer strong,footer div{color:#ffe39a}
 .hero .eyebrow{color:#b8f0e5}
 
+
+/* نسخه رنگی مستقل بر پایه رنگ‌دانه‌های نسخه‌های مصور ایرانی */
+:root{
+ --navy:#18366b;--navy2:#10264f;--blue:#315b91;--cyan:#2c8990;
+ --cyan2:#d9e9e5;--amber:#c49a45;--jade:#39745a;--ink:#292d36;
+ --muted:#5e6570;--bg:#f2ebdc;--paper:#f8f3e8;--line:#d7cbb4;
+ --soft:#e8dfcc;--vermilion:#b74635;
+}
+body{background:#f2ebdc;color:#292d36}
+header{background:#18366b;border-bottom:3px solid #c49a45}
+.brand,.brand small{color:#fff}
+.seal{background:#f8f3e8;border-color:#c49a45}
+.back{color:#f1d58d}
+.topline{background:linear-gradient(90deg,#39745a 0%,#2c8990 30%,#c49a45 65%,#b74635 100%)}
+.hero{background:linear-gradient(125deg,#10264f 0%,#18366b 68%,#315b91 100%);border-bottom:4px solid #c49a45}
+.hero h1,.hero p{color:#fff}
+.hero .eyebrow{color:#a9ded5}
+.archive{background:#e5dcc9}
+.archive-head h2{color:#18366b;border-right:4px solid #b74635;padding-right:12px}
+.archive-head p{color:#414650}
+.episode{background:#f8f3e8;border:1px solid #cdbd9e;box-shadow:0 12px 32px #10264f18}
+.cover{background:#e8dfcc;border:2px solid #c49a45}
+.episode-info h3{color:#18366b}
+.episode-info p,.meta{color:#414650}
+.tag,.count{background:#39745a;color:#fff;border:1px solid #c49a45}
+.episode-info audio{accent-color:#b74635}
+.qr-row{border-top:1px solid #c49a45}
+.qr-row img{border:2px solid #c49a45}
+footer{background:#10264f;border-top:4px solid #c49a45;color:#eee5d3}
+footer strong{color:#f1d58d}
+@media(max-width:700px){
+ html,body{width:100%;max-width:100%;overflow-x:hidden}
+ .wrap{width:calc(100% - 28px);max-width:100%}
+ .nav{height:auto;min-height:66px;gap:8px}
+ .brand{font-size:11px;line-height:1.5;min-width:0;flex:1}
+ .brand small{font-size:9px}
+ .back{font-size:11px;max-width:110px;text-align:left;line-height:1.7}
+ .hero{padding:28px 0}
+ .hero h1{font-size:clamp(26px,7vw,35px);line-height:1.5}
+ .hero p{font-size:12px;line-height:2}
+ .archive{padding:30px 0 48px}
+ .episode{grid-template-columns:minmax(0,1fr);padding:12px;gap:14px}
+ .cover{min-height:0;height:auto;aspect-ratio:4/3}
+ .cover img{width:100%;height:100%;object-fit:contain}
+ .episode-info{min-width:0}
+ .episode-info h3{font-size:21px;line-height:1.55}
+ .episode-info p{font-size:12px;line-height:2.1}
+ .episode-info audio{display:block;width:100%;min-width:0}
+ .meta{font-size:10px;gap:8px 12px;line-height:1.8}
+ .qr-row img{width:72px;height:72px;flex:0 0 72px}
+ .qr-row span{font-size:10px;line-height:1.9;color:#414650}
+}
+@media(max-width:390px){
+ .wrap{width:calc(100% - 22px)}
+ .back{max-width:92px;font-size:10px}
+ .episode{padding:10px}
+ .cover{aspect-ratio:1/1}
+}
+img,audio{max-width:100%}
+
 </style>
 </head>
 <body><div class="topline"></div><header><div class="wrap nav"><a class="brand" href="index.html"><span class="seal"><img src="https://raw.githubusercontent.com/islamicart/islamicart.github.io/main/%20%D9%84%D9%88%DA%AF%D9%88%20%D8%A7%D9%86%D8%AC%D9%85%D9%86%20%D9%87%D9%86%D8%B1%20%D8%A7%D8%B3%D9%84%D8%A7%D9%85%DB%8C%20.png" alt="نشان انجمن"></span><span>انجمن علمی هنر اسلامی<small>دانشگاه بیرجند</small></span></a><a class="back" href="index.html">بازگشت به صفحه اصلی ←</a></div></header>
