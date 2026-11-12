@@ -545,6 +545,29 @@ section{color:#f7f2e8}
 footer{background:#08182f}
 @media(max-width:720px){.links{background:#0b1c3b}}
 
+
+/* صفحه نخست خلوت‌تر؛ اسلایدر تصویری سه‌گانه و رویداد منتخب */
+.hero{padding:22px 0 12px}
+.hero-shell{padding:16px;border-radius:18px}
+.hero-grid{display:block}
+.feature-slider{max-width:100%}
+.slide-image{display:block;height:clamp(300px,43vw,510px);border-radius:13px;position:relative}
+.slide-image img{width:100%;height:100%;object-fit:cover}
+.slide-caption{padding:70px 30px 28px}
+.slide-caption strong{font-size:clamp(24px,3vw,38px)}
+.slide-caption span{display:block;color:#e5edf6;font-size:12px;margin-top:5px}
+.slide-more{display:inline-block;margin-top:12px;padding:6px 13px;border:1px solid #e0bd6c;border-radius:5px;color:#f7d98e;font-size:10px}
+.slider-controls{margin-top:10px}
+.events{background:#10264f}
+.events .section-head h2{color:#f4dfaa}
+.events .section-head p{color:#d7e3ee}
+.events .event{background:linear-gradient(145deg,#18366b,#1c4566);border:1px solid #54748a;color:#fff}
+.events .event h3{color:#fff}
+.events .event p{color:#e1e8e7}
+.events .event small{color:#a9ded5}
+.events .event-mark{background:#39745a;color:#fff;border:1px solid #c49a45}
+.event-link{display:inline-block;margin-top:8px;color:#f1d58d;font-size:10px}
+@media(max-width:720px){.hero{padding:12px 0}.hero-shell{padding:8px}.slide-image{height:250px}.slide-caption{padding:45px 15px 15px}.slide-caption strong{font-size:21px}.slide-caption span{font-size:10px}.events{padding:34px 0}.events-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -552,23 +575,20 @@ footer{background:#08182f}
 <div class="utility"><div class="wrap utility-inner"><span>دانشگاه بیرجند | دانشکده هنر</span><div class="utility-links"><a href="#about">درباره انجمن</a><a href="#contact">تماس با ما</a><a href="podcasts.html">رسانه و پادکست</a></div></div></div>
 <header><div class="wrap nav">
 <a class="brand" href="#home"><span class="seal"><img src="https://raw.githubusercontent.com/islamicart/islamicart.github.io/main/%20%D9%84%D9%88%DA%AF%D9%88%20%D8%A7%D9%86%D8%AC%D9%85%D9%86%20%D9%87%D9%86%D8%B1%20%D8%A7%D8%B3%D9%84%D8%A7%D9%85%DB%8C%20.png" alt="نشان انجمن علمی هنر اسلامی"></span><span>انجمن علمی هنر اسلامی<small>دانشگاه بیرجند</small></span></a>
-<nav class="links" id="siteNav"><a href="#home">صفحه اصلی</a><a href="#news">اخبار</a><a href="#categories">حوزه‌های هنری</a><a href="#events">رویدادها</a><a href="#gallery">گالری</a><a href="#media">آموزش و رسانه</a><a href="#about">معرفی انجمن</a></nav>
+<nav class="links" id="siteNav"><a href="#home">صفحه اصلی</a><a href="#events">رویدادها</a><a href="#about">معرفی انجمن</a><a href="#contact">ارتباط</a><a href="podcasts.html">پادکست‌ها</a></nav>
 <div class="nav-actions"><a class="nav-cta" href="podcasts.html">آرشیو پادکست‌ها</a><button class="menu-toggle" id="menuToggle" type="button" aria-label="باز کردن فهرست" aria-expanded="false">☰</button></div>
 </div></header>
 <main>
 <section class="hero" id="home"><div class="wrap hero-shell"><div class="hero-grid">
 <div class="hero-copy"><div class="eyebrow">درگاه علمی و فرهنگی انجمن</div><h1>روایت تازه‌ای از<br><span>هنر ایرانی ـ اسلامی</span></h1><p>از ریشه‌های هنرهای سنتی تا تجربه‌های خلاق امروز؛ همراه با تازه‌ترین خبرها، رویدادها، آموزش‌ها و روایت‌های تصویری انجمن علمی هنر اسلامی دانشگاه بیرجند.</p><div class="hero-actions"><a class="btn" href="#news">تازه‌های انجمن</a><a class="btn secondary" href="#categories">کاوش در هنرها</a></div><div class="hero-meta"><span><b>پژوهش</b> · شناخت میراث</span><span><b>آموزش</b> · تجربه و مهارت</span></div></div>
-<div class="feature-slider" aria-label="اسلایدر مطالب منتخب">
-<div class="slide-image"><img id="slideImage" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Sheikh_Lotfollah_Mosque%2C_Isfahan_03.jpg/1280px-Sheikh_Lotfollah_Mosque%2C_Isfahan_03.jpg" alt="مسجد شیخ لطف‌الله اصفهان"><div class="slide-caption"><small id="slideTag">معماری و هنر اسلامی</small><strong id="slideTitle">هندسه، رنگ و شکوه در معماری ایرانی</strong></div></div>
+<div class="feature-slider" aria-label="اسلایدر سه‌گانه رویدادها و هنر">
+<a class="slide-image" id="slideLink" href="events/naqsh-khial.html" aria-label="مشاهده نمایشگاه نقش خیال">
+<img id="slideImage" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Nawfal_visiting_Majniin_in_the_desert._Khamsa_of_Nizami._Persian%2C_south_provincial_style._Manuscript_1318%2C_miniatures_added_circa_1380._Tehran_University_Central_Library%2C_MS._5179.jpg" alt="نگاره‌ای از نسخه مصور خمسه نظامی">
+<div class="slide-caption"><small id="slideTag">رویداد منتخب · ۲۸ و ۲۹ مهر ۱۴۰۵</small><strong id="slideTitle">نمایشگاه نقش خیال</strong><span id="slideDesc">جلوه‌ای از توانمندی‌های هنری دانشجویان فرش و هنر اسلامی</span><b class="slide-more">مشاهده رویداد ←</b></div>
+</a>
 <div class="slider-controls"><div class="slider-dots"><button class="slider-dot active" data-slide="0" aria-label="اسلاید اول"></button><button class="slider-dot" data-slide="1" aria-label="اسلاید دوم"></button><button class="slider-dot" data-slide="2" aria-label="اسلاید سوم"></button></div><div class="slider-arrows"><button id="prevSlide" type="button" aria-label="اسلاید قبلی">›</button><button id="nextSlide" type="button" aria-label="اسلاید بعدی">‹</button></div></div>
 </div></div></div></section>
-<div class="quicknav"><div class="wrap quick-grid">
-<a class="quick-item" href="#categories"><span class="quick-icon">❀</span><span><strong>نگارگری</strong><small>نقاشی و روایت</small></span></a>
-<a class="quick-item" href="#categories"><span class="quick-icon">۞</span><span><strong>تذهیب</strong><small>آرایه و هندسه</small></span></a>
-<a class="quick-item" href="#categories"><span class="quick-icon">✧</span><span><strong>تشعیر</strong><small>ظرافت نقش</small></span></a>
-<a class="quick-item" href="#categories"><span class="quick-icon">✒</span><span><strong>خوشنویسی</strong><small>هنر نوشتار</small></span></a>
-<a class="quick-item" href="#media"><span class="quick-icon">▤</span><span><strong>منابع و آموزش</strong><small>مطالعه و یادگیری</small></span></a>
-</div></div>
+
 
 <section class="featured" id="news"><div class="wrap"><div class="section-head"><div><div class="section-kicker">از تازه‌ترین مطالب</div><h2>خبرها و روایت‌های انجمن</h2><p>آنچه در کارگاه‌ها، نشست‌ها و بازدیدهای علمی می‌گذرد</p></div><a class="more" href="#contact">همه خبرها ←</a></div>
 <div class="featured-grid">
@@ -599,43 +619,25 @@ footer{background:#08182f}
 <article class="news-card"><div class="news-image"><img src="https://raw.githubusercontent.com/islamicart/islamicart.github.io/main/IMG_20261112_213416_569.jpg" alt="پوستر آموزشی معرفی قلم‌موی نگارگری"></div><div class="news-body"><div class="news-meta"><span>آموزش</span><span>رسانه انجمن</span></div><h3>ابزارشناسی در نگارگری؛ قلم‌موی تخصصی</h3><p>آشنایی با ابزار و انتخاب وسایل مناسب در مسیر آموختن هنر نگارگری.</p><a class="read" href="podcasts.html">شنیدن پادکست ←</a></div></article>
 </div></div></section>
 
-<section class="events" id="events"><div class="wrap"><div class="section-head"><div><div class="section-kicker">حضور، تجربه، یادگیری</div><h2>برنامه‌ها و رویدادهای انجمن</h2><p>از کارگاه‌های مهارتی تا بازدیدهای تخصصی و نشست‌های گفتگو</p></div><a class="more" href="#contact">پیشنهاد همکاری ←</a></div>
+<section class="events" id="events"><div class="wrap"><div class="section-head"><div><div class="section-kicker">روایت تجربه‌های هنری</div><h2>رویدادهای انجمن</h2><p>منتخبی از نمایشگاه‌ها، کارگاه‌ها و بازدیدهای علمی</p></div><a class="more" href="events/naqsh-khial.html">همه جزئیات رویداد منتخب ←</a></div>
 <div class="events-grid">
-<article class="event"><div class="event-mark">✦</div><div><small>کارگاه تخصصی</small><h3>مهندسی قیمت‌گذاری در کسب‌وکارهای خلاق</h3><p>با حضور مهندس حسین شورستانی · از هنر تا ارزش</p></div></article>
-<article class="event"><div class="event-mark">◇</div><div><small>بازدید علمی</small><h3>بازدید از کارخانه کاشی آیدا</h3><p>آشنایی با فرایند تولید و ظرفیت‌های صنعت کاشی</p></div></article>
-<article class="event"><div class="event-mark">▤</div><div><small>بازدید فرهنگی</small><h3>باغ اکبریه و کتابخانه تخصصی هنر</h3><p>پیوند میراث معماری، منابع پژوهشی و تجربه میدانی</p></div></article>
-</div></div></section>
-
-<section class="gallery" id="gallery"><div class="wrap"><div class="section-head"><div><div class="section-kicker">به روایت تصویر</div><h2>گالری هنر و تجربه</h2><p>تصویرهایی از معماری، نگارگری و فعالیت‌های انجمن</p></div></div>
-<div class="gallery-grid">
-<a class="gallery-tile" href="https://commons.wikimedia.org/wiki/File:Sheikh_Lotfollah_Mosque,_Isfahan_03.jpg" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Sheikh_Lotfollah_Mosque%2C_Isfahan_03.jpg/1280px-Sheikh_Lotfollah_Mosque%2C_Isfahan_03.jpg" alt="مسجد شیخ لطف‌الله در اصفهان"><span>معماری و کاشی‌کاری ایرانی</span></a>
-<a class="gallery-tile" href="https://commons.wikimedia.org/wiki/File:Nawfal_visiting_Majniin_in_the_desert._Khamsa_of_Nizami._Persian,_south_provincial_style._Manuscript_1318,_miniatures_added_circa_1380._Tehran_University_Central_Library,_MS._5179.jpg" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Nawfal_visiting_Majniin_in_the_desert._Khamsa_of_Nizami._Persian%2C_south_provincial_style._Manuscript_1318%2C_miniatures_added_circa_1380._Tehran_University_Central_Library%2C_MS._5179.jpg" alt="نگاره‌ای از خمسه نظامی"><span>نگارگری و روایت تصویری</span></a>
-<a class="gallery-tile" href="podcasts.html"><img src="https://raw.githubusercontent.com/islamicart/islamicart.github.io/main/IMG_20261112_213416_569.jpg" alt="آموزش قلم‌موی نگارگری"><span>آموزش و تجربه هنری</span></a>
-<a class="gallery-tile" href="#events"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Sheikh_Lotfollah_Mosque%2C_Isfahan_03.jpg/1280px-Sheikh_Lotfollah_Mosque%2C_Isfahan_03.jpg" alt="جزئیات معماری مسجد شیخ لطف‌الله"><span>نقش و هندسه</span></a>
-<a class="gallery-tile" href="#about"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Nawfal_visiting_Majniin_in_the_desert._Khamsa_of_Nizami._Persian%2C_south_provincial_style._Manuscript_1318%2C_miniatures_added_circa_1380._Tehran_University_Central_Library%2C_MS._5179.jpg" alt="نگاره‌ای از نسخه خطی ایرانی"><span>میراث نسخه‌های مصور</span></a>
-</div>
-<p style="font-size:9px;color:#74869a;margin-top:12px">اعتبار تصاویر: Bernard Gagnon، مسجد شیخ لطف‌الله، مجوز CC BY-SA 4.0؛ نگاره خمسه نظامی، اثر تاریخی در مالکیت عمومی. تصاویر با هدف معرفی هنر و میراث فرهنگی درج شده‌اند.</p>
-</div></section>
-
-<section id="media"><div class="wrap"><div class="section-head"><div><div class="section-kicker">رسانه و یادگیری</div><h2>کتابخانه محتوایی انجمن</h2><p>منابعی برای شنیدن، دیدن و مطالعه بیشتر</p></div></div>
-<div class="media-grid">
-<article class="media-card"><div class="media-icon">♫</div><div><h3>پادکست‌های انجمن</h3><p>گفت‌وگوها و آموزش‌های شنیداری درباره ابزار، شیوه‌ها و تجربه‌های هنری.</p><a href="podcasts.html">ورود به آرشیو پادکست‌ها ←</a></div></article>
-<article class="media-card"><div class="media-icon">▤</div><div><h3>منابع و مقاله‌ها</h3><p>معرفی کتاب‌ها و مقاله‌های پژوهشی مرتبط با هنرهای ایرانی و اسلامی.</p><a href="#contact">پیشنهاد منبع ←</a></div></article>
-<article class="media-card"><div class="media-icon">▷</div><div><h3>گزارش تصویری</h3><p>ثبت و روایت تصویری کارگاه‌ها، نشست‌ها، نمایشگاه‌ها و بازدیدها.</p><a href="#gallery">مشاهده گالری ←</a></div></article>
+<a class="event" href="events/naqsh-khial.html"><div class="event-mark">✦</div><div><small>نمایشگاه منتخب · ۲۸ و ۲۹ مهر ۱۴۰۵</small><h3>نمایشگاه نقش خیال</h3><p>آثار و دستاوردهای دانشجویان رشته‌های فرش و هنر اسلامی · باشگاه مفاخر دانشگاه بیرجند</p><b class="event-link">مشاهده صفحه رویداد ←</b></div></a>
+<a class="event" href="#contact"><div class="event-mark">◇</div><div><small>کارگاه تخصصی</small><h3>مهندسی قیمت‌گذاری در کسب‌وکارهای خلاق</h3><p>با حضور مهندس حسین شورستانی · از هنر تا ارزش</p></div></a>
+<a class="event" href="#contact"><div class="event-mark">▤</div><div><small>بازدید علمی</small><h3>بازدید از کارخانه کاشی آیدا</h3><p>آشنایی با فرایند تولید و ظرفیت‌های صنعت کاشی</p></div></a>
 </div></div></section>
 
 <section class="about" id="about"><div class="wrap about-grid"><div class="about-visual"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Sheikh_Lotfollah_Mosque%2C_Isfahan_03.jpg/1280px-Sheikh_Lotfollah_Mosque%2C_Isfahan_03.jpg" alt="جزئیات معماری و کاشی‌کاری مسجد شیخ لطف‌الله"></div><div class="about-copy"><div class="eyebrow">درباره انجمن</div><h2>انجمن علمی هنر اسلامی دانشگاه بیرجند</h2><p>انجمن علمی هنر اسلامی، بستری دانشجویی برای شناخت، پاسداشت و بازآفرینی میراث هنرهای ایرانی و اسلامی است. با برگزاری برنامه‌های علمی و هنری، زمینه‌ای برای یادگیری، پژوهش، تجربه عملی و تبادل اندیشه میان دانشجویان و علاقه‌مندان فراهم می‌کنیم.</p><p>از نگارگری، تذهیب و تشعیر تا هنرهای سنتی و معاصر، تلاش می‌کنیم پیوندی زنده میان میراث هنری، آموزش دانشگاهی و خلاقیت امروز برقرار کنیم.</p><p><strong>استاد مشاور انجمن:</strong> سرکار خانم دکتر آرزو پایدارفرد</p><div class="about-facts"><span><b>آموزش</b>کارگاه و نشست تخصصی</span><span><b>پژوهش</b>مطالعه و تولید محتوا</span><span><b>تجربه</b>بازدید و فعالیت میدانی</span></div></div></div></section>
 
 <section id="contact"><div class="wrap contact-grid"><div><div class="section-kicker">با ما در ارتباط باشید</div><h2>به جمع همراهان هنر بپیوندید</h2><p>برای همکاری، پیشنهاد برنامه، حضور در رویدادها یا مشارکت در فعالیت‌های علمی و هنری، از راه‌های ارتباطی انجمن استفاده کنید.</p><a class="btn" href="https://www.instagram.com/islamic.art_birjand?cplk=ZWprcGc1a2JwcXI3" target="_blank" rel="noopener">صفحه انجمن در اینستاگرام</a></div><div class="contact-box"><div class="contact-row"><b>نام مجموعه</b> انجمن علمی هنر اسلامی دانشگاه بیرجند</div><div class="contact-row"><b>دانشگاه</b> دانشگاه بیرجند · دانشکده هنر</div><div class="contact-row"><b>استاد مشاور</b> سرکار خانم دکتر آرزو پایدارفرد</div><div class="contact-row"><b>اینستاگرام</b> <a href="https://www.instagram.com/islamic.art_birjand?cplk=ZWprcGc1a2JwcXI3" target="_blank" rel="noopener">صفحه انجمن</a></div><div class="contact-row"><b>تلگرام</b> <a href="https://t.me/islamicart_unibirjand" target="_blank" rel="noopener">کانال انجمن</a></div><div class="contact-row"><b>ایتا</b> <a href="https://eitaa.com/Honareslamu" target="_blank" rel="noopener">صفحه انجمن</a></div></div></div></section>
 </main>
-<footer><div class="wrap"><div class="footer-main"><div><div class="footer-brand">انجمن علمی هنر اسلامی</div><p>درگاه علمی و فرهنگی دانشجویان هنر اسلامی دانشگاه بیرجند؛ برای شناخت میراث، گسترش تجربه و روایت تازه‌ای از هنر.</p></div><div class="footer-col"><strong>دسترسی سریع</strong><a href="#news">اخبار و رویدادها</a><a href="#categories">شاخه‌های هنری</a><a href="#gallery">گالری تصاویر</a></div><div class="footer-col"><strong>رسانه و ارتباط</strong><a href="podcasts.html">آرشیو پادکست‌ها</a><a href="#media">منابع و آموزش</a><a href="#contact">راه‌های ارتباطی</a></div></div><div class="copyright"><span>© کلیه حقوق برای احسان محمدی و انجمن هنر اسلامی محفوظ است.</span><span>هنر، میراثی زنده و روایتی پیوسته</span></div></div></footer>
+<footer><div class="wrap"><div class="footer-main"><div><div class="footer-brand">انجمن علمی هنر اسلامی</div><p>درگاه علمی و فرهنگی دانشجویان هنر اسلامی دانشگاه بیرجند؛ برای شناخت میراث، گسترش تجربه و روایت تازه‌ای از هنر.</p></div><div class="footer-col"><strong>دسترسی سریع</strong><a href="#events">رویدادها</a><a href="events/naqsh-khial.html">نمایشگاه نقش خیال</a><a href="#about">معرفی انجمن</a></div><div class="footer-col"><strong>رسانه و ارتباط</strong><a href="podcasts.html">آرشیو پادکست‌ها</a><a href="podcasts.html">آرشیو پادکست‌ها</a><a href="#contact">راه‌های ارتباطی</a></div></div><div class="copyright"><span>© کلیه حقوق برای احسان محمدی و انجمن هنر اسلامی محفوظ است.</span><span>هنر، میراثی زنده و روایتی پیوسته</span></div></div></footer>
 <script>
 (()=>{const nav=document.getElementById("siteNav"),toggle=document.getElementById("menuToggle");toggle.addEventListener("click",()=>{const open=nav.classList.toggle("open");toggle.setAttribute("aria-expanded",String(open));});nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("open");toggle.setAttribute("aria-expanded","false");}));})();
 (()=>{const slides=[
-{src:"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Sheikh_Lotfollah_Mosque%2C_Isfahan_03.jpg/1280px-Sheikh_Lotfollah_Mosque%2C_Isfahan_03.jpg",alt:"مسجد شیخ لطف‌الله اصفهان",tag:"معماری و هنر اسلامی",title:"هندسه، رنگ و شکوه در معماری ایرانی"},
-{src:"https://upload.wikimedia.org/wikipedia/commons/f/fa/Nawfal_visiting_Majniin_in_the_desert._Khamsa_of_Nizami._Persian%2C_south_provincial_style._Manuscript_1318%2C_miniatures_added_circa_1380._Tehran_University_Central_Library%2C_MS._5179.jpg",alt:"نگاره خمسه نظامی",tag:"نگارگری و نسخه‌آرایی",title:"روایت‌های تصویری در نسخه‌های مصور ایران"},
-{src:"https://raw.githubusercontent.com/islamicart/islamicart.github.io/main/IMG_20261112_213416_569.jpg",alt:"آموزش قلم‌موی نگارگری",tag:"آموزش و رسانه انجمن",title:"یادگیری هنر؛ از ابزار تا آفرینش"}
-];let current=0;const img=document.getElementById("slideImage"),tag=document.getElementById("slideTag"),title=document.getElementById("slideTitle"),dots=[...document.querySelectorAll(".slider-dot")];function show(n){current=(n+slides.length)%slides.length;const s=slides[current];img.style.opacity=".25";setTimeout(()=>{img.src=s.src;img.alt=s.alt;tag.textContent=s.tag;title.textContent=s.title;img.style.opacity="1";},120);dots.forEach((d,i)=>d.classList.toggle("active",i===current));}document.getElementById("prevSlide").addEventListener("click",()=>show(current-1));document.getElementById("nextSlide").addEventListener("click",()=>show(current+1));dots.forEach(d=>d.addEventListener("click",()=>show(Number(d.dataset.slide))));})();
+{src:"https://upload.wikimedia.org/wikipedia/commons/f/fa/Nawfal_visiting_Majniin_in_the_desert._Khamsa_of_Nizami._Persian%2C_south_provincial_style._Manuscript_1318%2C_miniatures_added_circa_1380._Tehran_University_Central_Library%2C_MS._5179.jpg",alt:"نگاره‌ای از نسخه مصور خمسه نظامی",tag:"رویداد منتخب · ۲۸ و ۲۹ مهر ۱۴۰۵",title:"نمایشگاه نقش خیال",desc:"جلوه‌ای از توانمندی‌های هنری دانشجویان فرش و هنر اسلامی",href:"events/naqsh-khial.html"},
+{src:"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Sheikh_Lotfollah_Mosque%2C_Isfahan_03.jpg/1280px-Sheikh_Lotfollah_Mosque%2C_Isfahan_03.jpg",alt:"مسجد شیخ لطف‌الله اصفهان",tag:"معماری ایرانی ـ اسلامی",title:"هندسه، رنگ و شکوه در معماری ایرانی",desc:"نگاهی به تناسبات و نقش‌مایه‌های معماری",href:"#about"},
+{src:"https://upload.wikimedia.org/wikipedia/commons/f/fa/Nawfal_visiting_Majniin_in_the_desert._Khamsa_of_Nizami._Persian%2C_south_provincial_style._Manuscript_1318%2C_miniatures_added_circa_1380._Tehran_University_Central_Library%2C_MS._5179.jpg",alt:"نگاره‌ای از نسخه مصور ایرانی",tag:"میراث تصویری",title:"روایت در نسخه‌های مصور ایرانی",desc:"نگارگری، کتاب‌آرایی و جهان تصویر در هنر ایران",href:"#about"}
+];let current=0;const img=document.getElementById("slideImage"),tag=document.getElementById("slideTag"),title=document.getElementById("slideTitle"),desc=document.getElementById("slideDesc"),link=document.getElementById("slideLink"),dots=[...document.querySelectorAll(".slider-dot")];function show(n){current=(n+slides.length)%slides.length;const s=slides[current];img.style.opacity=".25";setTimeout(()=>{img.src=s.src;img.alt=s.alt;tag.textContent=s.tag;title.textContent=s.title;desc.textContent=s.desc;link.href=s.href;img.style.opacity="1";},120);dots.forEach((d,i)=>d.classList.toggle("active",i===current));}document.getElementById("prevSlide").addEventListener("click",()=>show(current-1));document.getElementById("nextSlide").addEventListener("click",()=>show(current+1));dots.forEach(d=>d.addEventListener("click",()=>show(Number(d.dataset.slide))));})();
 (()=>{const bar=document.getElementById("progress");const update=()=>{const max=document.documentElement.scrollHeight-innerHeight;bar.style.width=(max>0?scrollY/max*100:0)+"%";};addEventListener("scroll",update,{passive:true});update();})();
 </script>
 </body></html>
