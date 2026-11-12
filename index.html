@@ -24,6 +24,68 @@ section{padding:78px 0}.section-head{display:flex;justify-content:space-between;
 footer{background:#102d25;color:#d6dfd7;padding:30px 0}.footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center;font-size:12px}.footer-inner strong{color:#e0c28a}
 @media(max-width:850px){.links{display:none}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.hero{padding:55px 0}.art-panel{min-height:290px}.cards{grid-template-columns:1fr 1fr}.gallery-grid{grid-template-rows:130px 130px}.section-head{align-items:start;flex-direction:column}.nav{height:70px}}
 @media(max-width:560px){.wrap{width:min(100% - 28px,1160px)}.nav-cta{padding:8px 12px;font-size:11px}.brand{font-size:14px}.seal{width:42px;height:42px}.hero h1{font-size:34px}.stats-grid{padding:17px 0}.stat b{font-size:18px}.stat span{font-size:10px}.cards,.library-grid{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:125px 125px}.gallery-tile:first-child{grid-row:span 2}.features{grid-template-columns:1fr}.footer-inner{flex-direction:column;text-align:center}.ornament{width:245px}}
+
+/* Contemporary Persian-art visual refresh */
+:root{--green:#102f49;--green2:#174e70;--gold:#c28a32;--cream:#f4f1e8;--paper:#fffefa;--ink:#1d2c38;--muted:#65717b;--line:#e6dfd1;--shadow:0 22px 65px #102f4918}
+body{background:#f4f1e8;color:#1d2c38}
+.topline{height:4px;background:linear-gradient(90deg,#c28a32 0%,#e5c77d 22%,#164e79 52%,#c28a32 100%)}
+header{background:#f8f6efeb;border-bottom:1px solid #e5ddcc;box-shadow:0 8px 30px #102f4908}
+.seal{border-color:#c28a32;color:#164e79;background:#fffdf7}
+.seal:before{border-color:#c28a3290}
+.brand{color:#102f49}
+.links a{position:relative;padding:8px 0}
+.links a:after{content:"";position:absolute;right:0;bottom:0;width:0;height:2px;background:#c28a32;transition:width .25s}
+.links a:hover:after{width:100%}
+.nav-cta,.btn{border-radius:3px;background:#123d5a;box-shadow:0 7px 18px #123d5a20}
+.nav-cta:hover,.btn:hover{background:#1a587a}
+.hero{background:radial-gradient(ellipse at 78% 42%,#d9e5e7 0,transparent 38%),radial-gradient(ellipse at 10% 90%,#f0dfbd 0,transparent 34%),linear-gradient(120deg,#faf8f1,#f0eee5);padding-top:88px;padding-bottom:80px}
+.hero:after{border-color:#c28a3240;box-shadow:0 0 0 22px #c28a3208,0 0 0 44px #c28a3208,0 0 0 66px #c28a3208}
+.eyebrow{color:#a87423;letter-spacing:.02em}
+.hero h1,.section-head h2,.about-copy h3,.contact-grid h2{color:#102f49}
+.hero h1 span{color:#b47a22}
+.hero p{color:#5c6b76}
+.ornament{border-color:#c28a32;background:linear-gradient(145deg,#fffdf7,#e6e9e2);box-shadow:0 25px 70px #102f4918}
+.ornament:before{border-color:#c28a3290}.ornament:after{border-color:#174e7070}
+.ornament-inner{color:#123d5a}.ornament-inner b{color:#bd862e}
+.stats{background:linear-gradient(100deg,#102f49,#174e70)}
+.stats .stat b{color:#e5c47c}
+section{padding:88px 0}
+.about-art{background:radial-gradient(circle at center,#f8f0dd,#dce6e4);border:1px solid #e2d7c1;border-radius:2px}
+.about-art:before{border-color:#bd862e;box-shadow:0 0 0 16px #bd862e10,0 0 0 32px #174e7009}
+.about-art:after{color:#174e70}
+.feature{background:#fffefa;border:1px solid #e5ddce;border-radius:2px;transition:transform .25s,border-color .25s}
+.feature:hover{transform:translateY(-4px);border-color:#c28a32}
+.feature b{color:#b47a22}
+.events{background:#eaece7}
+.card{border-radius:2px;border-color:#e4ddcf;box-shadow:0 8px 24px #102f4908}
+.card-art{background:linear-gradient(135deg,#d9e6e6,#f0e2c7);color:#174e70}
+.card-art:after{border-color:#bd862e80}
+.card h3{color:#102f49}
+.card a,.more{color:#a87423}
+.gallery-tile{background:linear-gradient(145deg,#d6e3df,#eadfc9);color:#174e70}
+.gallery-tile:after{border-color:#bd862e90}
+.gallery-tile:first-child{background:linear-gradient(145deg,#c7d9d8,#e7d4ad)}
+.gallery-tile:nth-child(2){background:linear-gradient(145deg,#e6d5b7,#d2e1df)}
+.gallery-tile:nth-child(3){background:linear-gradient(145deg,#d1e0df,#e9dfca)}
+.library{background:linear-gradient(120deg,#102f49,#164a69)}
+.resource{border-radius:2px;background:#ffffff08;transition:transform .25s,border-color .25s}
+.resource:hover{transform:translateY(-5px);border-color:#d5ad62}
+.resource .ico{color:#e4c27b}
+.contact-box{background:#fffefa;border-color:#e5ddce;border-radius:2px;box-shadow:0 15px 40px #102f4909}
+.contact-row{border-color:#eee8dc}
+.contact-row b{color:#123d5a}
+footer{background:#0c263b}
+.footer-inner strong{color:#e5c47c}
+.btn.outline{box-shadow:none;border-color:#9eacb2}
+::selection{background:#d9c18d;color:#102f49}
+/* Scroll reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .75s ease,transform .75s cubic-bezier(.2,.7,.2,1)}
+.reveal.is-visible{opacity:1;transform:translateY(0)}
+.reveal-left{opacity:0;transform:translateX(30px);transition:opacity .8s ease,transform .8s ease}
+.reveal-left.is-visible{opacity:1;transform:translateX(0)}
+header.scrolled{box-shadow:0 10px 30px #102f4915}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal,.reveal-left{opacity:1;transform:none}}
+
 </style>
 </head>
 <body>
@@ -51,4 +113,21 @@ footer{background:#102d25;color:#d6dfd7;padding:30px 0}.footer-inner{display:fle
 <section id="contact"><div class="wrap contact-grid"><div><div class="eyebrow">در کنار هم</div><h2>با انجمن در ارتباط باشید</h2><p>برای همکاری، پیشنهاد برنامه، حضور در رویدادها یا مشارکت در فعالیت‌های علمی و هنری، از راه‌های ارتباطی انجمن استفاده کنید.</p><a class="btn" href="https://www.instagram.com/islamic.art_birjand?cplk=ZWprcGc1a2JwcXI3" target="_blank" rel="noopener">ارتباط در اینستاگرام</a></div><div class="contact-box"><div class="contact-row"><b>نام مجموعه</b> انجمن علمی هنر اسلامی دانشگاه بیرجند</div><div class="contact-row"><b>دانشگاه</b> دانشگاه بیرجند · دانشکده هنر · پردیس علوم رفتاری</div><div class="contact-row"><b>استاد مشاور</b> سرکار خانم دکتر آرزو پایدارفرد</div><div class="contact-row"><b>اینستاگرام</b> <a href="https://www.instagram.com/islamic.art_birjand?cplk=ZWprcGc1a2JwcXI3" target="_blank" rel="noopener">صفحه انجمن</a></div><div class="contact-row"><b>تلگرام</b> <a href="https://t.me/islamicart_unibirjand" target="_blank" rel="noopener">کانال انجمن</a></div><div class="contact-row"><b>ایتا</b> <a href="https://eitaa.com/Honareslamu" target="_blank" rel="noopener">صفحه انجمن</a></div></div></div></section>
 </main>
 <footer><div class="wrap footer-inner"><div><strong>انجمن علمی هنر اسلامی</strong> · دانشگاه بیرجند</div><div>ساخته‌شده با الهام از نقش و نگار هنر ایرانی</div><div>© کلیه حقوق برای احسان محمدی و انجمن هنر اسلامی محفوظ است</div></div></footer>
+
+<script>
+(()=>{
+ const header=document.querySelector('header');
+ const targets=document.querySelectorAll('main section,.stats,.card,.feature,.resource,.gallery-tile,.contact-box');
+ targets.forEach((el,i)=>{el.classList.add('reveal');el.style.transitionDelay=(i%4)*85+'ms'});
+ if('IntersectionObserver' in window){
+  const io=new IntersectionObserver(entries=>entries.forEach(entry=>{
+   if(entry.isIntersecting){entry.target.classList.add('is-visible');io.unobserve(entry.target)}
+  }),{threshold:.12,rootMargin:'0px 0px -35px 0px'});
+  targets.forEach(el=>io.observe(el));
+ }else{targets.forEach(el=>el.classList.add('is-visible'))}
+ const onScroll=()=>header.classList.toggle('scrolled',window.scrollY>12);
+ onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+})();
+</script>
+
 </body></html>
