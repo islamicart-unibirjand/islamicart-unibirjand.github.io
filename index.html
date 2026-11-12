@@ -330,6 +330,89 @@ img,video,iframe,audio{max-width:100%}
 .btn,.nav-cta{background:#17664f;border-color:#e0b64f;color:#fff}
 .btn.secondary{background:#f0f4f9;color:#102f66;border-color:#b8cbe0}
 
+
+/* نسخه رنگی مستقل بر پایه رنگ‌دانه‌های نسخه‌های مصور ایرانی */
+:root{
+ --navy:#18366b;--navy2:#10264f;--blue:#315b91;--cyan:#2c8990;
+ --cyan2:#d9e9e5;--amber:#c49a45;--jade:#39745a;--ink:#292d36;
+ --muted:#5e6570;--bg:#f2ebdc;--paper:#f8f3e8;--line:#d7cbb4;
+ --soft:#e8dfcc;--vermilion:#b74635;
+}
+body{background:#f2ebdc;color:#292d36}
+header{background:#18366b;border-bottom:3px solid #c49a45}
+.utility{background:#10264f;color:#eee5d3}
+.brand,.brand small{color:#fff}
+.links a{color:#f8f1e3}
+.links a:hover{color:#f1d58d}
+.hero,.hero-shell{background:linear-gradient(125deg,#10264f 0%,#18366b 68%,#315b91 100%);border-color:#c49a45}
+.hero h1,.hero p,.hero-meta,.hero-meta b{color:#fff}
+.hero h1 span{color:#f1d58d}
+.hero .eyebrow{color:#a9ded5}
+.eyebrow:before{background:#c49a45}
+.section-head h2,.section-head h3{color:#18366b}
+.section-head h2{border-right:4px solid #b74635;padding-right:12px}
+.quick-item,.side-list,.news-card,.media-card,.contact-box,.category,.event{
+ background:#f8f3e8;border:1px solid #d7cbb4;color:#292d36
+}
+.quick-item strong,.category h3,.news-body h3,.side-news h4,.event h3,.media-card h3{color:#18366b}
+.quick-item small,.category p,.news-body p,.event p,.media-card p,.contact-row,.contact-grid p{color:#414650}
+.quick-icon,.media-icon,.category-icon{background:#39745a;color:#fff;border:1px solid #c49a45}
+.category:nth-child(2n) .category-icon{background:#315b91}
+.category:nth-child(3n) .category-icon{background:#b74635}
+.category-section,.gallery{background:#e5dcc9}
+.featured,.events{background:#e8dfcc}
+.event{background:#f8f3e8}
+.event-mark{background:#b74635;color:#fff;border:1px solid #c49a45}
+.story-label{background:#b74635;color:#fff}
+.tag,.count{background:#39745a;color:#fff;border:1px solid #c49a45}
+.section-kicker,.news-meta,.side-news small,.event small{color:#28634e}
+.more,.read,.media-card a{color:#245b4b}
+.about{background:linear-gradient(120deg,#10264f,#18366b 68%,#39745a);border-block:4px solid #c49a45}
+.about h2,.about h3,.about p,.about-copy,.about-facts span{color:#fff}
+.about-facts b{color:#f1d58d}
+.btn,.nav-cta{background:#b74635;color:#fff;border:1px solid #d5ad61}
+.btn.secondary{background:#f8f3e8;color:#18366b;border:1px solid #c49a45}
+footer{background:#10264f;border-top:4px solid #c49a45;color:#eee5d3}
+.footer-col strong,.copyright{color:#f1d58d}
+.footer-col a,.footer-main p{color:#eee5d3}
+.gallery-tile{border:1px solid #c49a45}
+.slide-caption small{color:#f1d58d}
+@media(max-width:720px){
+ html,body{width:100%;max-width:100%;overflow-x:hidden}
+ .wrap{width:calc(100% - 28px);max-width:100%}
+ .nav{width:100%;min-width:0;gap:8px}
+ .brand{font-size:11px;min-width:0;flex:1}
+ .brand small{font-size:9px}
+ .links{max-width:100%;box-sizing:border-box;background:#10264f}
+ .links a{color:#fff;font-size:12px}
+ .hero-grid,.featured-grid,.about-grid,.contact-grid{grid-template-columns:minmax(0,1fr)}
+ .hero-shell{padding:18px 13px}
+ .hero h1{font-size:clamp(25px,7vw,34px);line-height:1.55}
+ .hero p{font-size:13px;line-height:2}
+ .quick-grid,.category-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ .quick-item,.category,.news-card,.event,.media-card,.contact-box,.side-list{min-width:0}
+ .quick-item{padding:10px 8px}
+ .quick-item strong{font-size:11px}
+ .quick-item small{font-size:9px}
+ .category{padding:12px 9px}
+ .category h3{font-size:15px}
+ .category p{font-size:10px;line-height:1.9}
+ .news-card{grid-template-columns:minmax(86px,32%) minmax(0,1fr)}
+ .news-body{min-width:0;overflow-wrap:anywhere}
+ .news-body h3{font-size:13px}
+ .news-body p{font-size:10px}
+ .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .footer-main{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:390px){
+ .wrap{width:calc(100% - 22px)}
+ .quick-grid,.category-grid{gap:7px}
+ .quick-item{padding:8px 6px}
+ .news-card{grid-template-columns:78px minmax(0,1fr)}
+ .footer-main{gap:12px}
+}
+img,video,iframe{max-width:100%;height:auto}
+
 </style>
 </head>
 <body>
