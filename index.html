@@ -257,10 +257,43 @@ footer{background:#122b37;border-radius:0}
  .card-art{min-height:160px}
 }
 
+
+/* Interactive studio */
+.interactive-studio{background:#e9e2d4;position:relative;overflow:hidden}
+.interactive-studio:before{content:"۞";position:absolute;left:-35px;top:-75px;font-size:260px;color:#b18a3d12;pointer-events:none}
+.studio-panel{position:relative;background:#fffdf7;border:1px solid #d8c8a9;padding:clamp(20px,4vw,38px);box-shadow:0 16px 42px #172b3a0c}
+.studio-question{font-family:var(--serif);font-size:clamp(20px,3vw,28px);margin:0 0 8px}
+.studio-hint{font-size:12px;color:var(--muted);margin:0 0 22px}
+.studio-options{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.studio-option{border:1px solid #dfd3bf;background:#faf6ed;padding:18px 14px;text-align:center;cursor:pointer;color:var(--ink);font:inherit;transition:.22s}
+.studio-option:hover,.studio-option:focus-visible{border-color:#176d70;background:#edf5ef;transform:translateY(-4px);outline:none}
+.studio-option .symbol{display:block;font-size:36px;color:#a63e32;margin-bottom:7px}
+.studio-option strong{display:block;font-family:var(--serif);font-size:17px}
+.studio-option small{display:block;color:var(--muted);font-size:10px;margin-top:5px}
+.studio-result{display:none;margin-top:20px;padding:18px;border-right:3px solid #176d70;background:#eef3e9}
+.studio-result.show{display:block;animation:studioIn .35s ease}
+.studio-result strong{font-family:var(--serif);font-size:20px}
+.studio-result p{font-size:12px;color:#5d665b;margin:6px 0 0}
+.studio-reset{border:0;background:transparent;color:#a63e32;font:inherit;font-size:11px;cursor:pointer;margin-top:12px;text-decoration:underline}
+.gallery-tile{cursor:pointer;transition:transform .25s,filter .25s}
+.gallery-tile:hover{transform:scale(.985);filter:saturate(1.15)}
+.gallery-tile:focus-visible{outline:3px solid #176d70;outline-offset:3px}
+.art-modal{position:fixed;inset:0;z-index:60;background:#101c22d9;display:none;align-items:center;justify-content:center;padding:22px}
+.art-modal.open{display:flex}
+.art-modal-card{max-width:480px;width:100%;background:#fffdf7;padding:28px;text-align:center;position:relative;border:1px solid #c5a04b;animation:studioIn .25s ease}
+.art-modal-card .modal-symbol{font-size:80px;color:#176d70;line-height:1.3}
+.art-modal-card h3{font-family:var(--serif);font-size:25px;margin:8px 0}
+.art-modal-card p{font-size:12px;color:#6f6a5e}
+.art-modal-close{position:absolute;left:12px;top:8px;border:0;background:transparent;font-size:25px;cursor:pointer;color:#5b5146}
+.scroll-progress{position:fixed;z-index:50;top:0;right:0;height:3px;width:0;background:linear-gradient(90deg,#c5a04b,#a63e32,#176d70)}
+@keyframes studioIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:720px){.studio-options{grid-template-columns:1fr}.studio-option{display:flex;align-items:center;text-align:right;gap:14px;padding:12px}.studio-option .symbol{width:42px;flex:0 0 42px;margin:0}.studio-option small{margin-right:auto}.studio-panel{padding:18px}.art-modal-card{padding:22px 16px}}
+@media(prefers-reduced-motion:reduce){.studio-result.show,.art-modal-card{animation:none}}
+
 </style>
 </head>
 <body>
-<div class="topline"></div>
+<div class="scroll-progress" id="scrollProgress"></div><div class="topline"></div>
 <header><div class="wrap nav">
 <a class="brand" href="#home"><span class="seal"><img src="https://raw.githubusercontent.com/islamicart/islamicart.github.io/main/%20%D9%84%D9%88%DA%AF%D9%88%20%D8%A7%D9%86%D8%AC%D9%85%D9%86%20%D9%87%D9%86%D8%B1%20%D8%A7%D8%B3%D9%84%D8%A7%D9%85%DB%8C%20.png" alt="نشان انجمن علمی هنر اسلامی"></span><span>هنر اسلامی<small>انجمن علمی دانشگاه بیرجند</small></span></a>
 <nav class="links"><a href="#home">خانه</a><a href="#about">درباره انجمن</a><a href="#events">رویدادها</a><a href="#gallery">گالری</a><a href="#library">کتابخانه</a><a href="podcasts.html">پادکست‌ها</a><a href="#contact">ارتباط</a></nav>
@@ -279,11 +312,68 @@ footer{background:#122b37;border-radius:0}
 <article class="card"><div class="card-art"><span>❀</span></div><div class="card-body"><span class="tag">نشست و گفت‌وگو</span><h3>گفت‌وگو درباره نقش و خیال</h3><p>فرصتی برای تبادل دیدگاه درباره هنرهای ایرانی، میراث تصویری و تجربه معاصر.</p><a href="#contact">اطلاعات بیشتر ←</a></div></article>
 </div></div></section>
 <section id="gallery"><div class="wrap"><div class="section-head"><div><div class="eyebrow">قاب‌هایی از تجربه</div><h2>گالری انجمن</h2><p>گوشه‌ای از کارگاه‌ها، بازدیدها و فعالیت‌های دانشجویی</p></div></div><div class="gallery-grid"><div class="gallery-tile">✺</div><div class="gallery-tile">❀</div><div class="gallery-tile">❖</div><div class="gallery-tile">✧</div><div class="gallery-tile">۞</div></div></div></section>
+
+<section class="interactive-studio" id="studio">
+ <div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">تجربه‌ای کوتاه و متفاوت</div><h2>کشف مسیر هنری تو</h2><p>با یک انتخاب ساده، با یکی از شاخه‌های هنر ایرانی‌ـ‌اسلامی آشنا شو</p></div></div>
+  <div class="studio-panel">
+   <h3 class="studio-question">بیشتر جذب کدام تجربه هنری می‌شوی؟</h3>
+   <p class="studio-hint">یکی از گزینه‌ها را انتخاب کن تا پیشنهاد انجمن را ببینی.</p>
+   <div class="studio-options">
+    <button class="studio-option" type="button" data-result="miniature"><span class="symbol">❀</span><span><strong>روایت با رنگ و تصویر</strong><small>جهان نگارگری</small></span></button>
+    <button class="studio-option" type="button" data-result="tazhib"><span class="symbol">۞</span><span><strong>نظم و درخشش نقش‌ها</strong><small>جهان تذهیب</small></span></button>
+    <button class="studio-option" type="button" data-result="tashir"><span class="symbol">✺</span><span><strong>ظرافت و جزئیات</strong><small>جهان تشعیر</small></span></button>
+   </div>
+   <div class="studio-result" id="studioResult" aria-live="polite"><strong id="studioTitle"></strong><p id="studioText"></p><button class="studio-reset" type="button" id="studioReset">انتخاب دوباره</button></div>
+  </div>
+ </div>
+</section>
+<div class="art-modal" id="artModal" role="dialog" aria-modal="true" aria-labelledby="artModalTitle">
+ <div class="art-modal-card"><button class="art-modal-close" type="button" aria-label="بستن پنجره">×</button><div class="modal-symbol" id="modalSymbol"></div><h3 id="artModalTitle"></h3><p id="artModalText"></p></div>
+</div>
+
 <section class="library" id="library"><div class="wrap"><div class="section-head"><div><div class="eyebrow">یادگیری پیوسته</div><h2>کتابخانه و رسانه</h2><p>مسیرهایی برای مطالعه، تماشا و شنیدن درباره هنر</p></div></div><div class="library-grid"><div class="resource"><div class="ico">▤</div><h3>منابع و مقاله‌ها</h3><p>معرفی کتاب‌ها، مقاله‌ها و منابع پژوهشی مرتبط با هنرهای اسلامی و ایرانی.</p></div><div class="resource"><div class="ico">▷</div><h3>ویدئو و گزارش تصویری</h3><p>ثبت و انتشار گزارش کارگاه‌ها، نشست‌ها و بازدیدهای علمی انجمن.</p></div><div class="resource"><div class="ico">♫</div><h3>پادکست‌های انجمن</h3><p>آموزش‌ها و گفت‌وگوهای شنیداری درباره هنر، فرهنگ و خلاقیت.</p><a href="podcasts.html">ورود به آرشیو پادکست‌ها ←</a></div></div></div></section>
 <section id="contact"><div class="wrap contact-grid"><div><div class="eyebrow">در کنار هم</div><h2>با انجمن در ارتباط باشید</h2><p>برای همکاری، پیشنهاد برنامه، حضور در رویدادها یا مشارکت در فعالیت‌های علمی و هنری، از راه‌های ارتباطی انجمن استفاده کنید.</p><a class="btn" href="https://www.instagram.com/islamic.art_birjand?cplk=ZWprcGc1a2JwcXI3" target="_blank" rel="noopener">ارتباط در اینستاگرام</a></div><div class="contact-box"><div class="contact-row"><b>نام مجموعه</b> انجمن علمی هنر اسلامی دانشگاه بیرجند</div><div class="contact-row"><b>دانشگاه</b> دانشگاه بیرجند · دانشکده هنر · پردیس علوم رفتاری</div><div class="contact-row"><b>استاد مشاور</b> سرکار خانم دکتر آرزو پایدارفرد</div><div class="contact-row"><b>اینستاگرام</b> <a href="https://www.instagram.com/islamic.art_birjand?cplk=ZWprcGc1a2JwcXI3" target="_blank" rel="noopener">صفحه انجمن</a></div><div class="contact-row"><b>تلگرام</b> <a href="https://t.me/islamicart_unibirjand" target="_blank" rel="noopener">کانال انجمن</a></div><div class="contact-row"><b>ایتا</b> <a href="https://eitaa.com/Honareslamu" target="_blank" rel="noopener">صفحه انجمن</a></div></div></div></section>
 </main>
 <footer><div class="wrap footer-inner"><div><strong>انجمن علمی هنر اسلامی</strong> · دانشگاه بیرجند</div><div>با الهام از نقش و نگار هنر ایرانی</div><div>© کلیه حقوق برای احسان محمدی و انجمن هنر اسلامی محفوظ است</div></div></footer>
 <script>
 (()=>{const els=document.querySelectorAll('main section,.card,.feature,.resource,.gallery-tile,.contact-box');if(!('IntersectionObserver'in window)){els.forEach(e=>e.classList.add('is-visible'));return}els.forEach(e=>e.classList.add('reveal'));const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('is-visible');io.unobserve(x.target)}}),{threshold:.12});els.forEach(e=>io.observe(e))})();
+</script>
+
+<script>
+(()=>{
+ const results={
+  miniature:["نگارگری؛ روایت در قاب رنگ","اگر از قصه‌گویی تصویری و ترکیب رنگ‌ها لذت می‌بری، نگارگری می‌تواند دریچه جذابی برایت باشد. در برنامه‌های انجمن، سراغ روایت تصویری و شناخت شیوه‌های نگارگری برو."],
+  tazhib:["تذهیب؛ هندسه‌ای برای زیبایی","اگر نظم، تقارن و هماهنگی نقش‌ها برایت جذاب است، تذهیب را بیشتر کشف کن؛ از شمسه و ترنج تا اسلیمی و ختایی."],
+  tashir:["تشعیر؛ هنرِ ظرافت","اگر جزئیات ظریف و نقش‌مایه‌های گیاهی و جانوری را دوست داری، تشعیر می‌تواند انتخاب الهام‌بخشی باشد."]
+ };
+ document.querySelectorAll(".studio-option").forEach(btn=>btn.addEventListener("click",()=>{
+  const item=results[btn.dataset.result];if(!item)return;
+  document.getElementById("studioTitle").textContent=item[0];
+  document.getElementById("studioText").textContent=item[1];
+  document.getElementById("studioResult").classList.add("show");
+ }));
+ document.getElementById("studioReset")?.addEventListener("click",()=>document.getElementById("studioResult").classList.remove("show"));
+ const modal=document.getElementById("artModal");
+ const galleryInfo=[
+  ["✺","نقش و ترکیب‌بندی","در هنرهای ایرانی، نقش‌مایه‌ها با ریتم و تناسب در کنار هم معنا پیدا می‌کنند."],
+  ["❀","گل و گیاه در هنر","الهام از طبیعت، یکی از سرچشمه‌های مهم نقش‌پردازی در هنر ایرانی است."],
+  ["❖","هندسه و تناسب","هندسه در بسیاری از آرایه‌های هنر اسلامی، ساختاری منظم و چشم‌نواز می‌سازد."],
+  ["✧","جزئیات و آرایه‌ها","جزئیات ظریف می‌توانند به یک ترکیب هنری عمق و شخصیت ببخشند."],
+  ["۞","شمسه و مرکزیت","شمسه از نقش‌مایه‌های شاخص در آرایه‌پردازی و تذهیب ایرانی است."]
+ ];
+ document.querySelectorAll(".gallery-tile").forEach((tile,i)=>{
+  tile.setAttribute("role","button");tile.setAttribute("tabindex","0");tile.setAttribute("aria-label","نمایش توضیح اثر "+(i+1));
+  const open=()=>{const d=galleryInfo[i];document.getElementById("modalSymbol").textContent=d[0];document.getElementById("artModalTitle").textContent=d[1];document.getElementById("artModalText").textContent=d[2];modal.classList.add("open");document.body.style.overflow="hidden";};
+  tile.addEventListener("click",open);tile.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();open();}});
+ });
+ const close=()=>{modal.classList.remove("open");document.body.style.overflow="";};
+ modal.querySelector(".art-modal-close").addEventListener("click",close);
+ modal.addEventListener("click",e=>{if(e.target===modal)close();});
+ document.addEventListener("keydown",e=>{if(e.key==="Escape")close();});
+ const bar=document.getElementById("scrollProgress");
+ const update=()=>{const max=document.documentElement.scrollHeight-innerHeight;bar.style.width=(max>0?scrollY/max*100:0)+"%";};
+ addEventListener("scroll",update,{passive:true});update();
+})();
 </script>
 </body></html>
