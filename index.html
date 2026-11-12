@@ -586,6 +586,39 @@ footer{background:#08182f;border-top:4px solid #c49a45}
  .quick-item,.category,.news-card,.event,.media-card,.contact-box,.side-list{box-shadow:0 7px 18px #07162d44}
 }
 
+
+/* قاب بهینه اسلایدر سه‌گانه؛ نمایش کامل تصویر و تناسب در موبایل */
+.feature-slider{width:100%;min-width:0;max-width:100%}
+.slide-image{
+ display:block;width:100%;height:auto;aspect-ratio:4/3;max-height:430px;
+ box-sizing:border-box;background:#081b3b;border:1px solid #c49a45;
+ border-radius:18px;overflow:hidden;position:relative
+}
+.slide-image img{
+ display:block;width:100%;height:100%;min-height:0;object-fit:contain;
+ object-position:center center;background:#081b3b
+}
+.slide-caption{padding:clamp(48px,8%,76px) clamp(15px,3vw,26px) 20px}
+.slide-caption strong{font-size:clamp(17px,2vw,23px);line-height:1.55}
+.slide-caption span{display:block;max-width:90%;font-size:12px;line-height:1.8}
+.slider-controls{padding-inline:4px}
+.slider-arrows button{width:36px;height:36px}
+@media(max-width:720px){
+ .feature-slider{width:100%;max-width:100%}
+ .slide-image{aspect-ratio:16/10;height:auto;max-height:none;border-radius:13px}
+ .slide-image img{object-fit:contain}
+ .slide-caption{padding:42px 14px 13px}
+ .slide-caption strong{font-size:16px}
+ .slide-caption span{font-size:10px;max-width:100%;line-height:1.7}
+ .slider-controls{margin-top:10px}
+}
+@media(max-width:390px){
+ .slide-image{aspect-ratio:4/3}
+ .slide-caption{padding:38px 11px 11px}
+ .slide-caption strong{font-size:15px}
+ .slide-caption small{font-size:9px}
+}
+
 </style>
 </head>
 <body>
