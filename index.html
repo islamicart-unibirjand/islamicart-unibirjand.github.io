@@ -587,11 +587,6 @@ footer{background:#08182f;border-top:4px solid #c49a45}
 }
 
 
-/* تصویر مستند در دسترس نیست؛ نمایش کارت پیوند به خبر رسمی به‌جای عکس نامرتبط */
-.slide-image:has(#slideImage[src^="data:image/gif"]){background:radial-gradient(circle at 50% 20%,#244b78 0,#10264f 48%,#08182f 100%);display:flex;align-items:center;justify-content:center}
-.slide-image:has(#slideImage[src^="data:image/gif"]) #slideImage{opacity:0!important}
-.slide-image:has(#slideImage[src^="data:image/gif"])::before{content:"گزارش تصویری نمایشگاه نقش خیال";position:absolute;inset:18% 8% auto;text-align:center;color:#f2dfad;font:700 clamp(20px,3vw,30px) Vazirmatn,sans-serif;z-index:1}
-.slide-image:has(#slideImage[src^="data:image/gif"])::after{content:"مشاهده تصاویر در وب‌سایت رسمی دانشگاه بیرجند";position:absolute;inset:auto 8% 22%;text-align:center;color:#c8dedc;font:500 13px Vazirmatn,sans-serif;z-index:1}
 /* قاب بهینه اسلایدر سه‌گانه؛ نمایش کامل تصویر و تناسب در موبایل */
 .feature-slider{width:100%;min-width:0;max-width:100%}
 .slide-image{
@@ -639,7 +634,7 @@ footer{background:#08182f;border-top:4px solid #c49a45}
 <div class="hero-copy"><div class="eyebrow">درگاه علمی و فرهنگی انجمن</div><h1>روایت تازه‌ای از<br><span>هنر ایرانی ـ اسلامی</span></h1><p>از ریشه‌های هنرهای سنتی تا تجربه‌های خلاق امروز؛ همراه با تازه‌ترین خبرها، رویدادها، آموزش‌ها و روایت‌های تصویری انجمن علمی هنر اسلامی دانشگاه بیرجند.</p><div class="hero-actions"><a class="btn" href="#news">تازه‌های انجمن</a><a class="btn secondary" href="#categories">کاوش در هنرها</a></div><div class="hero-meta"><span><b>پژوهش</b> · شناخت میراث</span><span><b>آموزش</b> · تجربه و مهارت</span></div></div>
 <div class="feature-slider" aria-label="اسلایدر سه‌گانه رویدادها و هنر">
 <a class="slide-image" id="slideLink" href="events/naqsh-khial.html" aria-label="مشاهده نمایشگاه نقش خیال">
-<img id="slideImage" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="پیوند به خبر رسمی و تصاویر نمایشگاه نقش خیال در وب‌سایت دانشگاه بیرجند">
+<img id="slideImage" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="تصویر نمایشی فرش ایرانی در بیرجند؛ تصویر جایگزین برای معرفی نمایشگاه نقش خیال">
 <div class="slide-caption"><small id="slideTag">رویداد منتخب · ۲۸ و ۲۹ مهر ۱۴۰۵</small><strong id="slideTitle">نمایشگاه نقش خیال</strong><span id="slideDesc">جلوه‌ای از توانمندی‌های هنری دانشجویان فرش و هنر اسلامی</span><b class="slide-more">مشاهده رویداد ←</b></div>
 </a>
 <div class="slider-controls"><div class="slider-dots"><button class="slider-dot active" data-slide="0" aria-label="اسلاید اول"></button><button class="slider-dot" data-slide="1" aria-label="اسلاید دوم"></button><button class="slider-dot" data-slide="2" aria-label="اسلاید سوم"></button></div><div class="slider-arrows"><button id="prevSlide" type="button" aria-label="اسلاید قبلی">›</button><button id="nextSlide" type="button" aria-label="اسلاید بعدی">‹</button></div></div>
@@ -658,7 +653,7 @@ footer{background:#08182f;border-top:4px solid #c49a45}
 <script>
 (()=>{const nav=document.getElementById("siteNav"),toggle=document.getElementById("menuToggle");toggle.addEventListener("click",()=>{const open=nav.classList.toggle("open");toggle.setAttribute("aria-expanded",String(open));});nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("open");toggle.setAttribute("aria-expanded","false");}));})();
 (()=>{const slides=[
-{src:"data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",alt:"گزارش تصویری رسمی نمایشگاه نقش خیال در وب‌سایت دانشگاه بیرجند",tag:"رویداد منتخب · ۲۸ و ۲۹ مهر ۱۴۰۵",title:"نمایشگاه نقش خیال",desc:"جلوه‌ای از توانمندی‌های هنری دانشجویان فرش و هنر اسلامی",href:"events/naqsh-khial.html"},
+{src:"https://media.arabicradio.net/original/2025/09/08/638929248020116056.jpg",alt:"تصویر نمایشی فرش ایرانی در بیرجند؛ تصویر جایگزین برای معرفی نمایشگاه نقش خیال",tag:"رویداد منتخب · ۲۸ و ۲۹ مهر ۱۴۰۵",title:"نمایشگاه نقش خیال",desc:"جلوه‌ای از توانمندی‌های هنری دانشجویان فرش و هنر اسلامی",href:"events/naqsh-khial.html"},
 {src:"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Sheikh_Lotfollah_Mosque%2C_Isfahan_03.jpg/1280px-Sheikh_Lotfollah_Mosque%2C_Isfahan_03.jpg",alt:"مسجد شیخ لطف‌الله اصفهان",tag:"معماری ایرانی ـ اسلامی",title:"هندسه، رنگ و شکوه در معماری ایرانی",desc:"نگاهی به تناسبات و نقش‌مایه‌های معماری",href:"#about"},
 {src:"https://raw.githubusercontent.com/islamicart/islamicart.github.io/main/IMG_20261112_213416_569.jpg",alt:"پوستر معرفی قلم‌موی تخصصی نگارگری",tag:"آموزش و رسانه انجمن",title:"ابزارشناسی در نگارگری",desc:"آشنایی با قلم‌موی تخصصی نگارگری",href:"podcasts.html"}
 ];let current=0;const img=document.getElementById("slideImage"),tag=document.getElementById("slideTag"),title=document.getElementById("slideTitle"),desc=document.getElementById("slideDesc"),link=document.getElementById("slideLink"),dots=[...document.querySelectorAll(".slider-dot")];function show(n){current=(n+slides.length)%slides.length;const s=slides[current];img.style.opacity=".25";setTimeout(()=>{img.src=s.src;img.alt=s.alt;tag.textContent=s.tag;title.textContent=s.title;desc.textContent=s.desc;link.href=s.href;img.style.opacity="1";},120);dots.forEach((d,i)=>d.classList.toggle("active",i===current));}document.getElementById("prevSlide").addEventListener("click",()=>show(current-1));document.getElementById("nextSlide").addEventListener("click",()=>show(current+1));dots.forEach(d=>d.addEventListener("click",()=>show(Number(d.dataset.slide))));})();
