@@ -175,6 +175,49 @@ footer{background:linear-gradient(110deg,#081a40,#10295b 65%,#124e45);border-top
 img,video,iframe,audio{max-width:100%}
 .grid,.hero-grid,.featured-grid,.about-grid,.contact-grid,.footer-main{min-width:0}
 
+
+/* خوانایی و چیدمان موبایل؛ طلایی به‌عنوان رنگ تزئینی، نه متن روی سطح روشن */
+:root{--gold:#d6a83f;--gold-light:#f4d477}
+@media(max-width:700px){
+ body{font-size:14px}
+ .wrap{width:calc(100% - 28px)}
+ .nav{height:auto;min-height:66px;gap:8px}
+ .brand{font-size:12px;line-height:1.5;min-width:0;flex:1}
+ .brand small{font-size:10px}
+ .seal{width:38px;height:38px;flex:0 0 38px}
+ .back{font-size:11px;max-width:112px;text-align:left;line-height:1.7}
+ .hero{padding:28px 0}
+ .hero h1{font-size:clamp(27px,7vw,36px);line-height:1.5}
+ .hero p{font-size:12px;line-height:2.1}
+ .archive{padding:30px 0 48px}
+ .archive-head h2{font-size:22px}
+ .archive-head p{font-size:11px;line-height:1.9}
+ .episode{grid-template-columns:minmax(0,1fr);padding:12px;gap:14px}
+ .cover{min-height:0;height:auto;aspect-ratio:4/3}
+ .cover img{width:100%;height:100%;object-fit:contain}
+ .episode-info{min-width:0}
+ .episode-info h3{font-size:21px;line-height:1.55}
+ .episode-info p{font-size:12px;line-height:2.1}
+ .episode-info audio{display:block;width:100%;min-width:0}
+ .meta{font-size:10px;gap:8px 12px;line-height:1.8}
+ .qr-row{align-items:center}
+ .qr-row img{width:72px;height:72px;flex:0 0 72px}
+ .qr-row span{font-size:10px;line-height:1.9}
+ footer{font-size:10px;line-height:2}
+}
+@media(max-width:390px){
+ .wrap{width:calc(100% - 22px)}
+ .back{max-width:95px;font-size:10px}
+ .episode{padding:10px}
+ .cover{aspect-ratio:1/1}
+}
+/* کنتراست: متن روی کارت روشن همیشه تیره؛ طلایی فقط روی لاجوردی/یشمی */
+.archive-head h2,.archive-head p,.episode-info h3,.episode-info p,
+.meta,.qr-row span{color:#203653}
+.tag,.count{background:#17664f;color:#fff2c8;border:1px solid #d6a83f}
+.back,footer strong,footer div{color:#ffe39a}
+.hero .eyebrow{color:#b8f0e5}
+
 </style>
 </head>
 <body><div class="topline"></div><header><div class="wrap nav"><a class="brand" href="index.html"><span class="seal"><img src="https://raw.githubusercontent.com/islamicart/islamicart.github.io/main/%20%D9%84%D9%88%DA%AF%D9%88%20%D8%A7%D9%86%D8%AC%D9%85%D9%86%20%D9%87%D9%86%D8%B1%20%D8%A7%D8%B3%D9%84%D8%A7%D9%85%DB%8C%20.png" alt="نشان انجمن"></span><span>انجمن علمی هنر اسلامی<small>دانشگاه بیرجند</small></span></a><a class="back" href="index.html">بازگشت به صفحه اصلی ←</a></div></header>
