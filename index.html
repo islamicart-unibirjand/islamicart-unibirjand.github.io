@@ -692,40 +692,6 @@ footer{background:#08182f;border-top:4px solid #c49a45}
 
 .about-visual img{object-position:center 38%}
 
-/* Islamic Arts Persian AI assistant */
-.ai-launcher{position:fixed;z-index:90;left:22px;bottom:22px;display:flex;align-items:center;gap:10px;border:1px solid #d8b96f;background:linear-gradient(135deg,#173b78,#0e2a5d);color:#fff;border-radius:999px;padding:10px 17px 10px 12px;box-shadow:0 12px 34px #10295b35;cursor:pointer;font-weight:800;font-size:12px}
-.ai-launcher:hover{transform:translateY(-2px);box-shadow:0 16px 36px #10295b45}
-.ai-launcher-icon{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#d8b96f;color:#173b78;font-size:19px}
-.ai-panel{position:fixed;z-index:95;left:22px;bottom:84px;width:min(390px,calc(100vw - 28px));height:min(590px,calc(100dvh - 115px));display:none;flex-direction:column;overflow:hidden;border:1px solid #d6bd7d;border-radius:18px;background:#f8fafc;box-shadow:0 22px 65px #0c245344}
-.ai-panel.open{display:flex}
-.ai-head{display:flex;align-items:center;gap:11px;padding:14px 15px;background:linear-gradient(120deg,#10295b,#176d78);color:#fff}
-.ai-avatar{width:40px;height:40px;display:grid;place-items:center;border-radius:12px;background:#e0bd6c;color:#173b78;font-size:21px}
-.ai-head-copy{flex:1;min-width:0}.ai-head-copy strong{display:block;font:700 16px var(--serif)}.ai-head-copy small{display:block;color:#dce9f3;font-size:9px}
-.ai-close{width:32px;height:32px;border:1px solid #ffffff55;border-radius:50%;background:#ffffff12;color:#fff;font-size:18px;cursor:pointer}
-.ai-status{padding:7px 14px;background:#edf3f7;border-bottom:1px solid #dbe5ee;color:#536a80;font-size:9px}
-.ai-status:before{content:"";display:inline-block;width:7px;height:7px;margin-left:6px;border-radius:50%;background:#d5a84e}
-.ai-status.ready:before{background:#299b72}
-.ai-messages{flex:1;overflow:auto;padding:14px 12px;display:flex;flex-direction:column;gap:11px;scroll-behavior:smooth}
-.ai-msg{max-width:88%;padding:10px 12px;border-radius:13px;font-size:11px;line-height:2;white-space:pre-wrap;overflow-wrap:anywhere}
-.ai-msg.bot{align-self:flex-start;background:#fff;border:1px solid #dce5ed;color:#263e59;border-bottom-right-radius:4px}
-.ai-msg.user{align-self:flex-end;background:#173b78;color:#fff;border-bottom-left-radius:4px}
-.ai-msg-tools{display:flex;justify-content:flex-start;margin-top:4px}
-.ai-speak{border:0;background:transparent;color:#16828a;font:inherit;font-size:9px;cursor:pointer;padding:2px 0}
-.ai-suggestions{display:flex;gap:6px;overflow:auto;padding:0 12px 10px;scrollbar-width:thin}
-.ai-suggestion{white-space:nowrap;border:1px solid #c9d9e6;border-radius:999px;background:#fff;color:#315476;padding:6px 10px;font:inherit;font-size:9px;cursor:pointer}
-.ai-suggestion:hover{border-color:#1b9298;background:#eaf7f6}
-.ai-composer{display:flex;align-items:flex-end;gap:7px;padding:10px;border-top:1px solid #dbe5ee;background:#fff}
-.ai-input{flex:1;min-width:0;max-height:100px;resize:none;border:1px solid #d6e0e9;border-radius:12px;padding:9px 11px;font:inherit;font-size:11px;line-height:1.8;outline:none;background:#fbfcfe;color:#213b58}
-.ai-input:focus{border-color:#23969a;box-shadow:0 0 0 3px #23969a18}
-.ai-tool-btn,.ai-send{width:38px;height:38px;flex:0 0 38px;display:grid;place-items:center;border:1px solid #d1deea;border-radius:11px;background:#f5f8fb;color:#173b78;font-size:17px;cursor:pointer}
-.ai-tool-btn.recording{background:#fff0ed;color:#b54135;border-color:#e6a69e;animation:aiPulse 1.2s infinite}
-.ai-send{background:#197f83;border-color:#197f83;color:#fff}
-.ai-tool-btn:disabled,.ai-send:disabled{opacity:.45;cursor:not-allowed}
-.ai-footnote{padding:0 12px 8px;background:#fff;color:#7a8ca0;font-size:8px;text-align:center}
-.ai-typing{display:flex;gap:4px;align-items:center;padding:3px 0}.ai-typing i{width:5px;height:5px;border-radius:50%;background:#6b91a7;animation:aiBounce .8s infinite alternate}.ai-typing i:nth-child(2){animation-delay:.2s}.ai-typing i:nth-child(3){animation-delay:.4s}
-@keyframes aiPulse{50%{box-shadow:0 0 0 5px #e6a69e33}}@keyframes aiBounce{to{transform:translateY(-4px);opacity:.45}}
-@media(max-width:600px){.ai-launcher{left:13px;bottom:13px;padding:8px 13px 8px 9px}.ai-panel{left:8px;right:8px;bottom:72px;width:auto;height:min(72dvh,620px);border-radius:16px}.ai-msg{font-size:11px}}
-
 </style>
 </head>
 <body>
@@ -800,35 +766,7 @@ footer{background:#08182f;border-top:4px solid #c49a45}
 {src:"https://raw.githubusercontent.com/islamicart-unibirjand/islamicart-unibirjand.github.io/main/IMG_20261112_213416_569.jpg",alt:"پوستر معرفی قلم‌موی تخصصی نگارگری",tag:"آموزش و رسانه انجمن",title:"ابزارشناسی در نگارگری",desc:"آشنایی با قلم‌موی تخصصی نگارگری",href:"podcasts.html"}
 ];let current=0;const img=document.getElementById("slideImage"),tag=document.getElementById("slideTag"),title=document.getElementById("slideTitle"),desc=document.getElementById("slideDesc"),link=document.getElementById("slideLink"),dots=[...document.querySelectorAll(".slider-dot")];function show(n){current=(n+slides.length)%slides.length;const s=slides[current];img.style.opacity=".25";setTimeout(()=>{img.src=s.src;img.alt=s.alt;tag.textContent=s.tag;title.textContent=s.title;desc.textContent=s.desc;link.href=s.href;img.style.opacity="1";},120);dots.forEach((d,i)=>d.classList.toggle("active",i===current));}document.getElementById("prevSlide").addEventListener("click",()=>show(current-1));document.getElementById("nextSlide").addEventListener("click",()=>show(current+1));dots.forEach(d=>d.addEventListener("click",()=>show(Number(d.dataset.slide))));})();
 (()=>{const bar=document.getElementById("progress");const update=()=>{const max=document.documentElement.scrollHeight-innerHeight;bar.style.width=(max>0?scrollY/max*100:0)+"%";};addEventListener("scroll",update,{passive:true});update();})();
-</script>
-
-<script src="assistant-config.js"></script>
-<script>
-(()=>{
- const $=id=>document.getElementById(id);
- const launcher=$("aiLauncher"),panel=$("aiPanel"),close=$("aiClose"),form=$("aiForm"),input=$("aiInput"),messages=$("aiMessages"),send=$("aiSend"),mic=$("aiMic"),status=$("aiStatus");
- const apiBase=(window.ASSISTANT_CONFIG&&window.ASSISTANT_CONFIG.apiBase||"").replace(/\/$/,"");
- const history=[];
- let recorder=null,recordedChunks=[],mediaStream=null,busy=false;
- const setStatus=(text,ready=false)=>{status.textContent=text;status.classList.toggle("ready",ready)};
- const addMessage=(text,who="bot")=>{
-   const node=document.createElement("div");node.className="ai-msg "+who;node.textContent=text;
-   if(who==="bot" && "speechSynthesis" in window){
-     const tools=document.createElement("div");tools.className="ai-msg-tools";
-     const speak=document.createElement("button");speak.type="button";speak.className="ai-speak";speak.textContent="🔊 خواندن پاسخ";
-     speak.addEventListener("click",()=>speakText(text));tools.appendChild(speak);node.appendChild(tools);
-   }
-   messages.appendChild(node);messages.scrollTop=messages.scrollHeight;return node;
- };
- const speakText=text=>{
-   if(!("speechSynthesis" in window)){setStatus("خواندن صوتی در این مرورگر پشتیبانی نمی‌شود.");return}
-   speechSynthesis.cancel();const utterance=new SpeechSynthesisUtterance(text);utterance.lang="fa-IR";utterance.rate=.94;
-   const voices=speechSynthesis.getVoices();const fa=voices.find(v=>/^fa([_-]|$)/i.test(v.lang));
-   if(fa)utterance.voice=fa;
-   utterance.onerror=()=>setStatus("صدای فارسی روی این دستگاه در دسترس نیست؛ می‌توانی پاسخ را بخوانی.");
-   speechSynthesis.speak(utterance);
- };
- const typing=()=>{const n=document.createElement("div");n.className="ai-msg bot";n.innerHTML='<span class="ai-typing" aria-label="در حال نوشتن"><i></i><i></i><i></i></span>';messages.appendChild(n);messages.scrollTop=messages.scrollHeight;return n};
+</scrip"div");n.className="ai-msg bot";n.innerHTML='<span class="ai-typing" aria-label="در حال نوشتن"><i></i><i></i><i></i></span>';messages.appendChild(n);messages.scrollTop=messages.scrollHeight;return n};
  const setBusy=value=>{busy=value;send.disabled=value;mic.disabled=value;input.disabled=value};
  const ask=async text=>{
    const clean=text.trim();if(!clean||busy)return;
@@ -876,5 +814,7 @@ footer{background:#08182f;border-top:4px solid #c49a45}
  window.addEventListener("beforeunload",()=>{stopTracks();if("speechSynthesis"in window)speechSynthesis.cancel()});
 })();
 </script>
+
+</body></html
 
 </body></html>
