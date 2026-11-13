@@ -732,32 +732,6 @@ footer{background:#08182f;border-top:4px solid #c49a45}
 </main>
 <footer><div class="wrap"><div class="footer-main"><div><div class="footer-brand">انجمن علمی هنر اسلامی</div><p>درگاه علمی و فرهنگی دانشجویان هنر اسلامی دانشگاه بیرجند؛ برای شناخت میراث، گسترش تجربه و روایت تازه‌ای از هنر.</p></div><div class="footer-col"><strong>دسترسی سریع</strong><a href="#events">رویدادها</a><a href="events/naqsh-khial.html">نمایشگاه نقش خیال</a><a href="#about">معرفی انجمن</a></div><div class="footer-col"><strong>رسانه و ارتباط</strong><a href="podcasts.html">آرشیو پادکست‌ها</a><a href="podcasts.html">آرشیو پادکست‌ها</a><a href="#contact">راه‌های ارتباطی</a></div></div><div class="copyright"><span>© کلیه حقوق برای احسان محمدی و انجمن هنر اسلامی محفوظ است.</span><span>هنر، میراثی زنده و روایتی پیوسته</span></div></div></footer>
 
-<button class="ai-launcher" id="aiLauncher" type="button" aria-expanded="false" aria-controls="aiPanel">
-  <span class="ai-launcher-icon" aria-hidden="true">✦</span><span>گفت‌وگو با دستیار هوشمند</span>
-</button>
-<section class="ai-panel" id="aiPanel" aria-label="دستیار هوشمند هنر اسلامی">
-  <div class="ai-head">
-    <div class="ai-avatar" aria-hidden="true">✺</div>
-    <div class="ai-head-copy"><strong>یار هنر</strong><small>دستیار هوشمند انجمن علمی هنر اسلامی</small></div>
-    <button class="ai-close" id="aiClose" type="button" aria-label="بستن">×</button>
-  </div>
-  <div class="ai-status" id="aiStatus" role="status">برای فعال‌شدن پاسخ‌گویی، اتصال امن دستیار باید تنظیم شود.</div>
-  <div class="ai-messages" id="aiMessages" aria-live="polite">
-    <div class="ai-msg bot">درود! من «یار هنر» هستم؛ دستیار هوشمند انجمن علمی هنر اسلامی دانشگاه بیرجند. می‌توانم درباره هنرهای ایرانی و اسلامی، رویدادها و فعالیت‌های انجمن گفت‌وگو کنم.</div>
-  </div>
-  <div class="ai-suggestions" id="aiSuggestions">
-    <button class="ai-suggestion" type="button">هنر تذهیب چیست؟</button>
-    <button class="ai-suggestion" type="button">درباره نقش خیال بگو</button>
-    <button class="ai-suggestion" type="button">فعالیت‌های انجمن چیست؟</button>
-  </div>
-  <form class="ai-composer" id="aiForm">
-    <button class="ai-tool-btn" id="aiMic" type="button" aria-label="ضبط پیام صوتی" title="ضبط پیام صوتی">🎙</button>
-    <textarea class="ai-input" id="aiInput" rows="1" maxlength="3000" placeholder="پیامت را بنویس..." aria-label="متن پیام"></textarea>
-    <button class="ai-send" id="aiSend" type="submit" aria-label="ارسال پیام">➤</button>
-  </form>
-  <div class="ai-footnote">ورودی صوتی فارسی · خواندن پاسخ با صدای دستگاه (در صورت پشتیبانی)</div>
-</section>
-
 <script>
 (()=>{const nav=document.getElementById("siteNav"),toggle=document.getElementById("menuToggle");toggle.addEventListener("click",()=>{const open=nav.classList.toggle("open");toggle.setAttribute("aria-expanded",String(open));});nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("open");toggle.setAttribute("aria-expanded","false");}));})();
 (()=>{const slides=[
@@ -766,55 +740,6 @@ footer{background:#08182f;border-top:4px solid #c49a45}
 {src:"https://raw.githubusercontent.com/islamicart-unibirjand/islamicart-unibirjand.github.io/main/IMG_20261112_213416_569.jpg",alt:"پوستر معرفی قلم‌موی تخصصی نگارگری",tag:"آموزش و رسانه انجمن",title:"ابزارشناسی در نگارگری",desc:"آشنایی با قلم‌موی تخصصی نگارگری",href:"podcasts.html"}
 ];let current=0;const img=document.getElementById("slideImage"),tag=document.getElementById("slideTag"),title=document.getElementById("slideTitle"),desc=document.getElementById("slideDesc"),link=document.getElementById("slideLink"),dots=[...document.querySelectorAll(".slider-dot")];function show(n){current=(n+slides.length)%slides.length;const s=slides[current];img.style.opacity=".25";setTimeout(()=>{img.src=s.src;img.alt=s.alt;tag.textContent=s.tag;title.textContent=s.title;desc.textContent=s.desc;link.href=s.href;img.style.opacity="1";},120);dots.forEach((d,i)=>d.classList.toggle("active",i===current));}document.getElementById("prevSlide").addEventListener("click",()=>show(current-1));document.getElementById("nextSlide").addEventListener("click",()=>show(current+1));dots.forEach(d=>d.addEventListener("click",()=>show(Number(d.dataset.slide))));})();
 (()=>{const bar=document.getElementById("progress");const update=()=>{const max=document.documentElement.scrollHeight-innerHeight;bar.style.width=(max>0?scrollY/max*100:0)+"%";};addEventListener("scroll",update,{passive:true});update();})();
-</scrip"div");n.className="ai-msg bot";n.innerHTML='<span class="ai-typing" aria-label="در حال نوشتن"><i></i><i></i><i></i></span>';messages.appendChild(n);messages.scrollTop=messages.scrollHeight;return n};
- const setBusy=value=>{busy=value;send.disabled=value;mic.disabled=value;input.disabled=value};
- const ask=async text=>{
-   const clean=text.trim();if(!clean||busy)return;
-   if(!apiBase){addMessage("اتصال هوش مصنوعی هنوز راه‌اندازی نشده است. رابط گفت‌وگو آماده شده، اما برای پاسخ واقعی باید سرویس امن API روی سرور فعال و نشانی آن در assistant-config.js ثبت شود.","bot");return}
-   addMessage(clean,"user");history.push({role:"user",content:clean});input.value="";setBusy(true);const pending=typing();
-   try{
-     const response=await fetch(apiBase+"/api/chat",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({messages:history.slice(-12)})});
-     const data=await response.json();if(!response.ok)throw new Error(data.error||"پاسخی از سرویس دریافت نشد.");
-     const answer=(data.reply||"پاسخی دریافت نشد.").trim();pending.remove();addMessage(answer,"bot");history.push({role:"assistant",content:answer});
-   }catch(error){pending.remove();addMessage("در ارتباط با دستیار مشکلی پیش آمد. لطفاً کمی بعد دوباره تلاش کن. ("+error.message+")","bot");history.pop()}
-   finally{setBusy(false);input.focus()}
- };
- launcher.addEventListener("click",()=>{panel.classList.toggle("open");launcher.setAttribute("aria-expanded",String(panel.classList.contains("open")));if(panel.classList.contains("open"))input.focus()});
- close.addEventListener("click",()=>{panel.classList.remove("open");launcher.setAttribute("aria-expanded","false")});
- form.addEventListener("submit",e=>{e.preventDefault();ask(input.value)});
- input.addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();form.requestSubmit()}});
- $("aiSuggestions").addEventListener("click",e=>{const b=e.target.closest("button");if(b)ask(b.textContent)});
- if(apiBase){setStatus("دستیار آماده گفت‌وگو است.",true)}else{setStatus("رابط آماده است؛ اتصال امن API هنوز تنظیم نشده است.")}
- const stopTracks=()=>{if(mediaStream){mediaStream.getTracks().forEach(t=>t.stop());mediaStream=null}};
- mic.addEventListener("click",async()=>{
-   if(busy)return;
-   if(recorder&&recorder.state==="recording"){recorder.stop();mic.classList.remove("recording");mic.textContent="🎙";mic.title="ضبط پیام صوتی";return}
-   if(!apiBase){setStatus("برای تشخیص گفتار فارسی، ابتدا باید API امن فعال شود.");return}
-   if(!navigator.mediaDevices?.getUserMedia||!window.MediaRecorder){setStatus("ضبط صدا در این مرورگر پشتیبانی نمی‌شود.");return}
-   try{
-     mediaStream=await navigator.mediaDevices.getUserMedia({audio:true});recordedChunks=[];
-     const mime=["audio/webm;codecs=opus","audio/webm","audio/mp4"].find(t=>MediaRecorder.isTypeSupported(t));
-     recorder=new MediaRecorder(mediaStream,mime?{mimeType:mime}:undefined);
-     recorder.ondataavailable=e=>{if(e.data.size)recordedChunks.push(e.data)};
-     recorder.onstop=async()=>{
-       stopTracks();const blob=new Blob(recordedChunks,{type:recorder.mimeType||"audio/webm"});
-       if(!blob.size){setStatus("صدایی ضبط نشد.");return}
-       setStatus("در حال تبدیل گفتار فارسی به متن…");setBusy(true);
-       try{
-         const fd=new FormData();fd.append("file",blob,"voice.webm");fd.append("language","fa");
-         const r=await fetch(apiBase+"/api/transcribe",{method:"POST",body:fd});const d=await r.json();
-         if(!r.ok)throw new Error(d.error||"تشخیص صدا ناموفق بود.");
-         input.value=(d.text||"").trim();setStatus("گفتار به متن تبدیل شد؛ در حال ارسال…",true);setBusy(false);
-         if(input.value)ask(input.value);
-       }catch(err){setBusy(false);setStatus("تشخیص صدا انجام نشد: "+err.message)}
-     };
-     recorder.start();mic.classList.add("recording");mic.textContent="■";mic.title="پایان ضبط";setStatus("در حال ضبط؛ برای پایان، دوباره روی میکروفون بزن.");
-   }catch(err){stopTracks();setStatus("اجازه دسترسی به میکروفون داده نشد یا میکروفون در دسترس نیست.")}
- });
- window.addEventListener("beforeunload",()=>{stopTracks();if("speechSynthesis"in window)speechSynthesis.cancel()});
-})();
 </script>
-
-</body></html
 
 </body></html>
