@@ -691,6 +691,41 @@ footer{background:#08182f;border-top:4px solid #c49a45}
 }
 
 .about-visual img{object-position:center 38%}
+
+/* Islamic Arts Persian AI assistant */
+.ai-launcher{position:fixed;z-index:90;left:22px;bottom:22px;display:flex;align-items:center;gap:10px;border:1px solid #d8b96f;background:linear-gradient(135deg,#173b78,#0e2a5d);color:#fff;border-radius:999px;padding:10px 17px 10px 12px;box-shadow:0 12px 34px #10295b35;cursor:pointer;font-weight:800;font-size:12px}
+.ai-launcher:hover{transform:translateY(-2px);box-shadow:0 16px 36px #10295b45}
+.ai-launcher-icon{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#d8b96f;color:#173b78;font-size:19px}
+.ai-panel{position:fixed;z-index:95;left:22px;bottom:84px;width:min(390px,calc(100vw - 28px));height:min(590px,calc(100dvh - 115px));display:none;flex-direction:column;overflow:hidden;border:1px solid #d6bd7d;border-radius:18px;background:#f8fafc;box-shadow:0 22px 65px #0c245344}
+.ai-panel.open{display:flex}
+.ai-head{display:flex;align-items:center;gap:11px;padding:14px 15px;background:linear-gradient(120deg,#10295b,#176d78);color:#fff}
+.ai-avatar{width:40px;height:40px;display:grid;place-items:center;border-radius:12px;background:#e0bd6c;color:#173b78;font-size:21px}
+.ai-head-copy{flex:1;min-width:0}.ai-head-copy strong{display:block;font:700 16px var(--serif)}.ai-head-copy small{display:block;color:#dce9f3;font-size:9px}
+.ai-close{width:32px;height:32px;border:1px solid #ffffff55;border-radius:50%;background:#ffffff12;color:#fff;font-size:18px;cursor:pointer}
+.ai-status{padding:7px 14px;background:#edf3f7;border-bottom:1px solid #dbe5ee;color:#536a80;font-size:9px}
+.ai-status:before{content:"";display:inline-block;width:7px;height:7px;margin-left:6px;border-radius:50%;background:#d5a84e}
+.ai-status.ready:before{background:#299b72}
+.ai-messages{flex:1;overflow:auto;padding:14px 12px;display:flex;flex-direction:column;gap:11px;scroll-behavior:smooth}
+.ai-msg{max-width:88%;padding:10px 12px;border-radius:13px;font-size:11px;line-height:2;white-space:pre-wrap;overflow-wrap:anywhere}
+.ai-msg.bot{align-self:flex-start;background:#fff;border:1px solid #dce5ed;color:#263e59;border-bottom-right-radius:4px}
+.ai-msg.user{align-self:flex-end;background:#173b78;color:#fff;border-bottom-left-radius:4px}
+.ai-msg-tools{display:flex;justify-content:flex-start;margin-top:4px}
+.ai-speak{border:0;background:transparent;color:#16828a;font:inherit;font-size:9px;cursor:pointer;padding:2px 0}
+.ai-suggestions{display:flex;gap:6px;overflow:auto;padding:0 12px 10px;scrollbar-width:thin}
+.ai-suggestion{white-space:nowrap;border:1px solid #c9d9e6;border-radius:999px;background:#fff;color:#315476;padding:6px 10px;font:inherit;font-size:9px;cursor:pointer}
+.ai-suggestion:hover{border-color:#1b9298;background:#eaf7f6}
+.ai-composer{display:flex;align-items:flex-end;gap:7px;padding:10px;border-top:1px solid #dbe5ee;background:#fff}
+.ai-input{flex:1;min-width:0;max-height:100px;resize:none;border:1px solid #d6e0e9;border-radius:12px;padding:9px 11px;font:inherit;font-size:11px;line-height:1.8;outline:none;background:#fbfcfe;color:#213b58}
+.ai-input:focus{border-color:#23969a;box-shadow:0 0 0 3px #23969a18}
+.ai-tool-btn,.ai-send{width:38px;height:38px;flex:0 0 38px;display:grid;place-items:center;border:1px solid #d1deea;border-radius:11px;background:#f5f8fb;color:#173b78;font-size:17px;cursor:pointer}
+.ai-tool-btn.recording{background:#fff0ed;color:#b54135;border-color:#e6a69e;animation:aiPulse 1.2s infinite}
+.ai-send{background:#197f83;border-color:#197f83;color:#fff}
+.ai-tool-btn:disabled,.ai-send:disabled{opacity:.45;cursor:not-allowed}
+.ai-footnote{padding:0 12px 8px;background:#fff;color:#7a8ca0;font-size:8px;text-align:center}
+.ai-typing{display:flex;gap:4px;align-items:center;padding:3px 0}.ai-typing i{width:5px;height:5px;border-radius:50%;background:#6b91a7;animation:aiBounce .8s infinite alternate}.ai-typing i:nth-child(2){animation-delay:.2s}.ai-typing i:nth-child(3){animation-delay:.4s}
+@keyframes aiPulse{50%{box-shadow:0 0 0 5px #e6a69e33}}@keyframes aiBounce{to{transform:translateY(-4px);opacity:.45}}
+@media(max-width:600px){.ai-launcher{left:13px;bottom:13px;padding:8px 13px 8px 9px}.ai-panel{left:8px;right:8px;bottom:72px;width:auto;height:min(72dvh,620px);border-radius:16px}.ai-msg{font-size:11px}}
+
 </style>
 </head>
 <body>
@@ -730,6 +765,33 @@ footer{background:#08182f;border-top:4px solid #c49a45}
 <section id="contact"><div class="wrap contact-grid"><div><div class="section-kicker">با ما در ارتباط باشید</div><h2>به جمع همراهان هنر بپیوندید</h2><p>برای همکاری، پیشنهاد برنامه، حضور در رویدادها یا مشارکت در فعالیت‌های علمی و هنری، از راه‌های ارتباطی انجمن استفاده کنید.</p><a class="btn" href="https://www.instagram.com/islamic.art_birjand?cplk=ZWprcGc1a2JwcXI3" target="_blank" rel="noopener">صفحه انجمن در اینستاگرام</a></div><div class="contact-box"><div class="contact-row"><b>نام مجموعه</b> انجمن علمی هنر اسلامی دانشگاه بیرجند</div><div class="contact-row"><b>دانشگاه</b> دانشگاه بیرجند · دانشکده هنر</div><div class="contact-row"><b>استاد مشاور</b> سرکار خانم دکتر آرزو پایدارفرد</div><div class="contact-row"><b>اینستاگرام</b> <a href="https://www.instagram.com/islamic.art_birjand?cplk=ZWprcGc1a2JwcXI3" target="_blank" rel="noopener">صفحه انجمن</a></div><div class="contact-row"><b>تلگرام</b> <a href="https://t.me/islamicart_unibirjand" target="_blank" rel="noopener">کانال انجمن</a></div><div class="contact-row"><b>ایتا</b> <a href="https://eitaa.com/Honareslamu" target="_blank" rel="noopener">صفحه انجمن</a></div></div></div></section>
 </main>
 <footer><div class="wrap"><div class="footer-main"><div><div class="footer-brand">انجمن علمی هنر اسلامی</div><p>درگاه علمی و فرهنگی دانشجویان هنر اسلامی دانشگاه بیرجند؛ برای شناخت میراث، گسترش تجربه و روایت تازه‌ای از هنر.</p></div><div class="footer-col"><strong>دسترسی سریع</strong><a href="#events">رویدادها</a><a href="events/naqsh-khial.html">نمایشگاه نقش خیال</a><a href="#about">معرفی انجمن</a></div><div class="footer-col"><strong>رسانه و ارتباط</strong><a href="podcasts.html">آرشیو پادکست‌ها</a><a href="podcasts.html">آرشیو پادکست‌ها</a><a href="#contact">راه‌های ارتباطی</a></div></div><div class="copyright"><span>© کلیه حقوق برای احسان محمدی و انجمن هنر اسلامی محفوظ است.</span><span>هنر، میراثی زنده و روایتی پیوسته</span></div></div></footer>
+
+<button class="ai-launcher" id="aiLauncher" type="button" aria-expanded="false" aria-controls="aiPanel">
+  <span class="ai-launcher-icon" aria-hidden="true">✦</span><span>گفت‌وگو با دستیار هوشمند</span>
+</button>
+<section class="ai-panel" id="aiPanel" aria-label="دستیار هوشمند هنر اسلامی">
+  <div class="ai-head">
+    <div class="ai-avatar" aria-hidden="true">✺</div>
+    <div class="ai-head-copy"><strong>یار هنر</strong><small>دستیار هوشمند انجمن علمی هنر اسلامی</small></div>
+    <button class="ai-close" id="aiClose" type="button" aria-label="بستن">×</button>
+  </div>
+  <div class="ai-status" id="aiStatus" role="status">برای فعال‌شدن پاسخ‌گویی، اتصال امن دستیار باید تنظیم شود.</div>
+  <div class="ai-messages" id="aiMessages" aria-live="polite">
+    <div class="ai-msg bot">درود! من «یار هنر» هستم؛ دستیار هوشمند انجمن علمی هنر اسلامی دانشگاه بیرجند. می‌توانم درباره هنرهای ایرانی و اسلامی، رویدادها و فعالیت‌های انجمن گفت‌وگو کنم.</div>
+  </div>
+  <div class="ai-suggestions" id="aiSuggestions">
+    <button class="ai-suggestion" type="button">هنر تذهیب چیست؟</button>
+    <button class="ai-suggestion" type="button">درباره نقش خیال بگو</button>
+    <button class="ai-suggestion" type="button">فعالیت‌های انجمن چیست؟</button>
+  </div>
+  <form class="ai-composer" id="aiForm">
+    <button class="ai-tool-btn" id="aiMic" type="button" aria-label="ضبط پیام صوتی" title="ضبط پیام صوتی">🎙</button>
+    <textarea class="ai-input" id="aiInput" rows="1" maxlength="3000" placeholder="پیامت را بنویس..." aria-label="متن پیام"></textarea>
+    <button class="ai-send" id="aiSend" type="submit" aria-label="ارسال پیام">➤</button>
+  </form>
+  <div class="ai-footnote">ورودی صوتی فارسی · خواندن پاسخ با صدای دستگاه (در صورت پشتیبانی)</div>
+</section>
+
 <script>
 (()=>{const nav=document.getElementById("siteNav"),toggle=document.getElementById("menuToggle");toggle.addEventListener("click",()=>{const open=nav.classList.toggle("open");toggle.setAttribute("aria-expanded",String(open));});nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("open");toggle.setAttribute("aria-expanded","false");}));})();
 (()=>{const slides=[
@@ -739,4 +801,80 @@ footer{background:#08182f;border-top:4px solid #c49a45}
 ];let current=0;const img=document.getElementById("slideImage"),tag=document.getElementById("slideTag"),title=document.getElementById("slideTitle"),desc=document.getElementById("slideDesc"),link=document.getElementById("slideLink"),dots=[...document.querySelectorAll(".slider-dot")];function show(n){current=(n+slides.length)%slides.length;const s=slides[current];img.style.opacity=".25";setTimeout(()=>{img.src=s.src;img.alt=s.alt;tag.textContent=s.tag;title.textContent=s.title;desc.textContent=s.desc;link.href=s.href;img.style.opacity="1";},120);dots.forEach((d,i)=>d.classList.toggle("active",i===current));}document.getElementById("prevSlide").addEventListener("click",()=>show(current-1));document.getElementById("nextSlide").addEventListener("click",()=>show(current+1));dots.forEach(d=>d.addEventListener("click",()=>show(Number(d.dataset.slide))));})();
 (()=>{const bar=document.getElementById("progress");const update=()=>{const max=document.documentElement.scrollHeight-innerHeight;bar.style.width=(max>0?scrollY/max*100:0)+"%";};addEventListener("scroll",update,{passive:true});update();})();
 </script>
+
+<script src="assistant-config.js"></script>
+<script>
+(()=>{
+ const $=id=>document.getElementById(id);
+ const launcher=$("aiLauncher"),panel=$("aiPanel"),close=$("aiClose"),form=$("aiForm"),input=$("aiInput"),messages=$("aiMessages"),send=$("aiSend"),mic=$("aiMic"),status=$("aiStatus");
+ const apiBase=(window.ASSISTANT_CONFIG&&window.ASSISTANT_CONFIG.apiBase||"").replace(/\/$/,"");
+ const history=[];
+ let recorder=null,recordedChunks=[],mediaStream=null,busy=false;
+ const setStatus=(text,ready=false)=>{status.textContent=text;status.classList.toggle("ready",ready)};
+ const addMessage=(text,who="bot")=>{
+   const node=document.createElement("div");node.className="ai-msg "+who;node.textContent=text;
+   if(who==="bot" && "speechSynthesis" in window){
+     const tools=document.createElement("div");tools.className="ai-msg-tools";
+     const speak=document.createElement("button");speak.type="button";speak.className="ai-speak";speak.textContent="🔊 خواندن پاسخ";
+     speak.addEventListener("click",()=>speakText(text));tools.appendChild(speak);node.appendChild(tools);
+   }
+   messages.appendChild(node);messages.scrollTop=messages.scrollHeight;return node;
+ };
+ const speakText=text=>{
+   if(!("speechSynthesis" in window)){setStatus("خواندن صوتی در این مرورگر پشتیبانی نمی‌شود.");return}
+   speechSynthesis.cancel();const utterance=new SpeechSynthesisUtterance(text);utterance.lang="fa-IR";utterance.rate=.94;
+   const voices=speechSynthesis.getVoices();const fa=voices.find(v=>/^fa([_-]|$)/i.test(v.lang));
+   if(fa)utterance.voice=fa;
+   utterance.onerror=()=>setStatus("صدای فارسی روی این دستگاه در دسترس نیست؛ می‌توانی پاسخ را بخوانی.");
+   speechSynthesis.speak(utterance);
+ };
+ const typing=()=>{const n=document.createElement("div");n.className="ai-msg bot";n.innerHTML='<span class="ai-typing" aria-label="در حال نوشتن"><i></i><i></i><i></i></span>';messages.appendChild(n);messages.scrollTop=messages.scrollHeight;return n};
+ const setBusy=value=>{busy=value;send.disabled=value;mic.disabled=value;input.disabled=value};
+ const ask=async text=>{
+   const clean=text.trim();if(!clean||busy)return;
+   if(!apiBase){addMessage("اتصال هوش مصنوعی هنوز راه‌اندازی نشده است. رابط گفت‌وگو آماده شده، اما برای پاسخ واقعی باید سرویس امن API روی سرور فعال و نشانی آن در assistant-config.js ثبت شود.","bot");return}
+   addMessage(clean,"user");history.push({role:"user",content:clean});input.value="";setBusy(true);const pending=typing();
+   try{
+     const response=await fetch(apiBase+"/api/chat",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({messages:history.slice(-12)})});
+     const data=await response.json();if(!response.ok)throw new Error(data.error||"پاسخی از سرویس دریافت نشد.");
+     const answer=(data.reply||"پاسخی دریافت نشد.").trim();pending.remove();addMessage(answer,"bot");history.push({role:"assistant",content:answer});
+   }catch(error){pending.remove();addMessage("در ارتباط با دستیار مشکلی پیش آمد. لطفاً کمی بعد دوباره تلاش کن. ("+error.message+")","bot");history.pop()}
+   finally{setBusy(false);input.focus()}
+ };
+ launcher.addEventListener("click",()=>{panel.classList.toggle("open");launcher.setAttribute("aria-expanded",String(panel.classList.contains("open")));if(panel.classList.contains("open"))input.focus()});
+ close.addEventListener("click",()=>{panel.classList.remove("open");launcher.setAttribute("aria-expanded","false")});
+ form.addEventListener("submit",e=>{e.preventDefault();ask(input.value)});
+ input.addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();form.requestSubmit()}});
+ $("aiSuggestions").addEventListener("click",e=>{const b=e.target.closest("button");if(b)ask(b.textContent)});
+ if(apiBase){setStatus("دستیار آماده گفت‌وگو است.",true)}else{setStatus("رابط آماده است؛ اتصال امن API هنوز تنظیم نشده است.")}
+ const stopTracks=()=>{if(mediaStream){mediaStream.getTracks().forEach(t=>t.stop());mediaStream=null}};
+ mic.addEventListener("click",async()=>{
+   if(busy)return;
+   if(recorder&&recorder.state==="recording"){recorder.stop();mic.classList.remove("recording");mic.textContent="🎙";mic.title="ضبط پیام صوتی";return}
+   if(!apiBase){setStatus("برای تشخیص گفتار فارسی، ابتدا باید API امن فعال شود.");return}
+   if(!navigator.mediaDevices?.getUserMedia||!window.MediaRecorder){setStatus("ضبط صدا در این مرورگر پشتیبانی نمی‌شود.");return}
+   try{
+     mediaStream=await navigator.mediaDevices.getUserMedia({audio:true});recordedChunks=[];
+     const mime=["audio/webm;codecs=opus","audio/webm","audio/mp4"].find(t=>MediaRecorder.isTypeSupported(t));
+     recorder=new MediaRecorder(mediaStream,mime?{mimeType:mime}:undefined);
+     recorder.ondataavailable=e=>{if(e.data.size)recordedChunks.push(e.data)};
+     recorder.onstop=async()=>{
+       stopTracks();const blob=new Blob(recordedChunks,{type:recorder.mimeType||"audio/webm"});
+       if(!blob.size){setStatus("صدایی ضبط نشد.");return}
+       setStatus("در حال تبدیل گفتار فارسی به متن…");setBusy(true);
+       try{
+         const fd=new FormData();fd.append("file",blob,"voice.webm");fd.append("language","fa");
+         const r=await fetch(apiBase+"/api/transcribe",{method:"POST",body:fd});const d=await r.json();
+         if(!r.ok)throw new Error(d.error||"تشخیص صدا ناموفق بود.");
+         input.value=(d.text||"").trim();setStatus("گفتار به متن تبدیل شد؛ در حال ارسال…",true);setBusy(false);
+         if(input.value)ask(input.value);
+       }catch(err){setBusy(false);setStatus("تشخیص صدا انجام نشد: "+err.message)}
+     };
+     recorder.start();mic.classList.add("recording");mic.textContent="■";mic.title="پایان ضبط";setStatus("در حال ضبط؛ برای پایان، دوباره روی میکروفون بزن.");
+   }catch(err){stopTracks();setStatus("اجازه دسترسی به میکروفون داده نشد یا میکروفون در دسترس نیست.")}
+ });
+ window.addEventListener("beforeunload",()=>{stopTracks();if("speechSynthesis"in window)speechSynthesis.cancel()});
+})();
+</script>
+
 </body></html>
